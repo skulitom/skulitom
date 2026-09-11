@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300" role="img" aria-labelledby="title desc">
+<title id="title">LitHarness</title>
+<desc id="desc">Original animated illustration. Motion is disabled when reduced motion is preferred.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171426"/><stop offset="1" stop-color="#0e1423"/></linearGradient>
+  <linearGradient id="rainbow"><stop stop-color="#71efd2"/><stop offset=".5" stop-color="#b496ff"/><stop offset="1" stop-color="#ff7fc8"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#7150ba" stop-opacity=".27"/><stop offset="1" stop-color="#7150ba" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+text{font-family:'Segoe UI',Arial,sans-serif}
+.mono{font-family:Consolas,'Liberation Mono',monospace}
+.float{animation:float 5s ease-in-out infinite}
+.float2{animation:float 6s ease-in-out -2s infinite}
+.orbit{animation:orbit 20s linear infinite;transform-box:fill-box;transform-origin:center}
+.spark{animation:spark 3s ease-in-out infinite}
+.dash{animation:dash 9s linear infinite}
+.blink{animation:blink 4.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.cursor{animation:cursor 1.5s step-end infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes spark{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes dash{to{stroke-dashoffset:-100}}
+@keyframes blink{0%,43%,47%,100%{transform:scaleY(1)}45%{transform:scaleY(.15)}}
+@keyframes cursor{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect x="1" y="1" width="238" height="298" rx="20" fill="url(#bg)" stroke="#353047"/><path d="M22 1 H218" stroke="#b496ff" stroke-width="2"/><text x="18" y="28" fill="#b496ff" font-size="12" font-weight="600" class="mono" letter-spacing="1">01 / AGENTS</text><g transform="translate(-127 24) scale(.65)"><g transform="translate(380 74)"><g class="float2">
+<path d="M-41 18 L-41 -22 Q-20 -30 0 -16 Q20 -30 41 -22 L41 18 Q20 10 0 27 Q-20 10 -41 18Z" fill="#342b48" stroke="#b496ff" stroke-width="2"/>
+<path d="M0 -15 V26 M-30 -10 Q-17 -14 -9 -5 M-30 0 Q-17 -4 -9 5 M10 -5 Q22 -13 32 -10 M10 5 Q22 -3 32 0" fill="none" stroke="#b496ff" stroke-width="2"/>
+</g></g><g transform="translate(326 50) scale(0.7)"><path class="spark" style="animation-delay:0s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#ffcd77"/></g><g transform="translate(430 36) scale(0.75)"><path class="spark" style="animation-delay:-1s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#ff7fc8"/></g><g transform="translate(392 30) scale(0.6)"><path class="spark" style="animation-delay:-2s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#71efd2"/></g></g><text x="18" y="150" fill="#f5f1ff" font-size="27" font-weight="650" >LitHarness</text><text x="18" y="216" fill="#b6aecb" font-size="19" font-weight="400" >AI agents for</text><text x="18" y="241" fill="#b6aecb" font-size="19" font-weight="400" >serial fiction.</text><text x="18" y="278" fill="#b496ff" font-size="12" font-weight="600" class="mono" letter-spacing="1">EXPLORE</text><path d="M203 279 L216 266 M204 266 H216 V278" fill="none" stroke="#b496ff" stroke-width="2"/>
+</svg>

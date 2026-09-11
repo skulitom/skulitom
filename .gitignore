@@ -1,0 +1,4 @@
+__pycache__/
+preview.html
+output/
+server-*.log
