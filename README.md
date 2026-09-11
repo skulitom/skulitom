@@ -3,6 +3,8 @@
   <img src="assets/v2/hello.svg" width="100%" alt="Artem Skulimovskiy — software engineer in London. Backend and infrastructure engineering, distributed systems, and AI.">
 </picture>
 
+<p align="center"><a href="https://skulitom.github.io/"><strong>Explore my portfolio — projects, apps, and engineering with AI agents →</strong></a></p>
+
 I'm a London-based software engineer focused on Python, backend infrastructure, and distributed systems. My experience spans production compute platforms, data engineering, and quantitative development.
 
 My current interests include **LLM agent orchestration, persistent state, and evaluation methods for complex systems.**
