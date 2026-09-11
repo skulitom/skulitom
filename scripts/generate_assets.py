@@ -13,6 +13,8 @@ PINK = "#ff7fc8"
 MINT = "#71efd2"
 GOLD = "#ffcd77"
 VIOLET = "#b496ff"
+SKY = "#88c8ff"
+CORAL = "#ffa88a"
 
 CSS = """
 text{font-family:'Segoe UI',Arial,sans-serif}
@@ -114,7 +116,7 @@ def card(name, label, title, lines, color, art, title_size=30):
     body += text(26,143,title,title_size,INK,650)
     body += text(27,178,lines[0],16,MUTED)
     body += text(27,201,lines[1],16,MUTED)
-    body += text(27,232,"VIEW PROJECT" if name != "london.svg" else "OPEN LIVE MAP",11,color,600,'class="mono" letter-spacing="1.2"')
+    body += text(27,232,"OPEN LIVE MAP" if name in {"london.svg", "export-atlas.svg"} else "VIEW PROJECT",11,color,600,'class="mono" letter-spacing="1.2"')
     body += '<path d="M433 229 L447 215 M433 215 H447 V229" fill="none" stroke="'+color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
     svg(name,480,250,body,title)
 
@@ -151,11 +153,35 @@ map_art += f'<path class="dash" d="M-53 3 Q-23 -12 -9 6 T22 11 T54 15" fill="non
 map_art += f'<circle class="spark" cx="-5" cy="-7" r="10" fill="{MINT}" fill-opacity=".25"/><circle cx="-5" cy="-7" r="4" fill="{MINT}"/></g>'
 card("london.svg","04 / DATA VISUALISATION","London in minutes",["Interactive travel-time mapping for London.","Walking, public transport, and driving."],GOLD,map_art,30)
 
+globe = f'''<g transform="translate(382 70)">
+<circle r="41" fill="{SKY}" fill-opacity=".06" stroke="{SKY}" stroke-width="1.8"/>
+<ellipse rx="19" ry="41" fill="none" stroke="{SKY}" stroke-opacity=".6"/>
+<ellipse rx="41" ry="15" fill="none" stroke="{SKY}" stroke-opacity=".6"/>
+<path d="M-37 -18 H37 M-37 18 H37 M0 -41 V41" fill="none" stroke="{SKY}" stroke-opacity=".3"/>
+<path class="dash" d="M-45 18 Q-15 -54 45 -8" fill="none" stroke="{MINT}" stroke-width="2.5" stroke-dasharray="4 5"/>
+<circle cx="-36" cy="2" r="4" fill="{MINT}"/>
+<circle cx="32" cy="-17" r="4" fill="{GOLD}"/>
+</g>'''
+card("export-atlas.svg","05 / GLOBAL TRADE","Export Atlas",["Global exports across goods and services.","Compare countries, markets, and years."],SKY,globe)
+
+controls = f'''<g transform="translate(382 72)"><g class="float2">
+<rect x="-52" y="-36" width="104" height="72" rx="11" fill="#2c2530" stroke="{CORAL}" stroke-width="1.8"/>
+<path d="M-52 -18 H52" stroke="{CORAL}" stroke-opacity=".4"/>
+<circle cx="-40" cy="-27" r="2" fill="{CORAL}"/><circle cx="-32" cy="-27" r="2" fill="{VIOLET}"/>
+<path d="M-35 -1 H35 M-35 17 H35" stroke="{CORAL}" stroke-width="2" stroke-opacity=".45" stroke-linecap="round"/>
+<circle cx="-9" cy="-1" r="5" fill="{CORAL}"/>
+<circle cx="19" cy="17" r="5" fill="{VIOLET}"/>
+<path d="M32 3 L44 9 L37 12 L34 19Z" fill="{MINT}" stroke="#2c2530" stroke-width="1.5"/>
+</g></g>'''
+card("agentui.svg","06 / DEVELOPER TOOLS","AgentUI",["Interactive controls for coding agents.","An MCP server for forms and live previews."],CORAL,controls)
+
 for name, number, titles, lines, color, art in [
     ("litharness", "01 / AGENTS", ["LitHarness"], ["AI agents for", "serial fiction."], VIOLET, book),
     ("latent-space", "02 / MODELS", ["Latent Space", "Explorer"], ["Interactive", "generative images."], PINK, latent),
     ("cathode", "03 / DESKTOP", ["Cathode"], ["A CRT monitor", "for Windows apps."], MINT, crt),
     ("london", "04 / MAPS", ["London", "in minutes"], ["Travel-time", "visualisation."], GOLD, map_art),
+    ("export-atlas", "05 / TRADE", ["Export Atlas"], ["Global trade,", "mapped by market."], SKY, globe),
+    ("agentui", "06 / TOOLS", ["AgentUI"], ["Forms and previews", "for coding agents."], CORAL, controls),
 ]:
     body = panel(240,300)
     body += f'<path d="M22 1 H218" stroke="{color}" stroke-width="2"/>'
@@ -165,7 +191,7 @@ for name, number, titles, lines, color, art in [
         body += text(18,150+i*31,line,27,INK,650)
     for i,line in enumerate(lines):
         body += text(18,216+i*25,line,19,MUTED)
-    body += text(18,278,"VIEW PROJECT" if name != "london" else "OPEN MAP",12,color,600,'class="mono" letter-spacing="1"')
+    body += text(18,278,"OPEN MAP" if name in {"london", "export-atlas"} else "VIEW PROJECT",12,color,600,'class="mono" letter-spacing="1"')
     body += f'<path d="M203 279 L216 266 M204 266 H216 V278" fill="none" stroke="{color}" stroke-width="2"/>'
     svg(name+"-mobile.svg",240,300,body,' '.join(titles))
 

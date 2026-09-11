@@ -26,6 +26,14 @@ My current interests include **LLM agent orchestration, persistent state, and ev
       <a href="https://skulitom.github.io/london-time-map/"><picture><source media="(max-width: 600px)" srcset="assets/v2/london-mobile.svg"><img src="assets/v2/london.svg" width="100%" alt="London in minutes — explore London by travel time, with an interactive map for walking, rail, buses, and driving. Open the live map."></picture></a>
     </td>
   </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://skulitom.github.io/export-atlas/"><picture><source media="(max-width: 600px)" srcset="assets/v2/export-atlas-mobile.svg"><img src="assets/v2/export-atlas.svg" width="100%" alt="Export Atlas — an interactive map of global goods and services exports. Compare countries, markets, and years. Open the live map."></picture></a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/skulitom/AgentUI"><picture><source media="(max-width: 600px)" srcset="assets/v2/agentui-mobile.svg"><img src="assets/v2/agentui.svg" width="100%" alt="AgentUI — an MCP server providing interactive controls for coding agents, including forms, sliders, diffs, and live previews. View the repository."></picture></a>
+    </td>
+  </tr>
 </table>
 
 [Browse all my repositories →](https://github.com/skulitom?tab=repositories)
