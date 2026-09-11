@@ -7,6 +7,10 @@ I'm a London-based software engineer focused on Python, backend infrastructure, 
 
 My current interests include **LLM agent orchestration, persistent state, and evaluation methods for complex systems.**
 
+## Engineering with AI agents
+
+I use AI coding agents throughout development, from planning and implementation to debugging and testing. I set the technical direction, coordinate the work, and validate results through review and reproducible checks.
+
 ## Selected projects
 
 <table>
@@ -43,6 +47,8 @@ My current interests include **LLM agent orchestration, persistent state, and ev
 **Systems & data** &nbsp; `Python` `SQL` `PostgreSQL` `Docker` `Linux` `Bash`
 
 **Machine learning & interfaces** &nbsp; `PyTorch` `NumPy` `TypeScript` `React`
+
+**Agent tooling** &nbsp; `Codex` `Claude Code`
 
 <details>
   <summary>Professional background</summary>
