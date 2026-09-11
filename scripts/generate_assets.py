@@ -4,8 +4,8 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSETS = ROOT / "assets"
-ASSETS.mkdir(exist_ok=True)
+ASSETS = ROOT / "assets" / "v2"
+ASSETS.mkdir(parents=True, exist_ok=True)
 
 INK = "#f5f1ff"
 MUTED = "#b6aecb"
