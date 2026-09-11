@@ -195,6 +195,43 @@ for name, number, titles, lines, color, art in [
     body += f'<path d="M203 279 L216 266 M204 266 H216 V278" fill="none" stroke="{color}" stroke-width="2"/>'
     svg(name+"-mobile.svg",240,300,body,' '.join(titles))
 
+def app_card(name, title, description, mobile_lines, color, icon):
+    for mobile in (False, True):
+        width, height = (520, 226) if mobile else (1000, 154)
+        body = panel(width, height)
+        body += f'<path d="M23 1 H{width-23}" stroke="{color}" stroke-width="2"/>'
+        body += f'<g transform="translate(72 {86 if mobile else 77})"><rect x="-42" y="-42" width="84" height="84" rx="19" fill="{color}" fill-opacity=".07" stroke="{color}" stroke-opacity=".3"/>{icon}</g>'
+        body += text(138,58 if mobile else 56,title,27 if mobile else 30,INK,650)
+        if mobile:
+            for index,line in enumerate(mobile_lines):
+                body += text(138,97+index*27,line,20,MUTED)
+        else:
+            body += text(139,88,description,18,MUTED)
+        body += text(139,195 if mobile else 126,"VIEW ON GOOGLE PLAY",13 if mobile else 11,color,600,'class="mono" letter-spacing="1.2"')
+        ax,ay=width-34,height-29
+        body += f'<path d="M{ax-13} {ay} L{ax} {ay-13} M{ax-13} {ay-13} H{ax} V{ay}" fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round"/>'
+        svg(name+("-mobile" if mobile else "")+".svg",width,height,body,title+" — on Google Play")
+
+greek_icon = text(0,18,"Ω",55,VIOLET,500,'text-anchor="middle"')
+greek_icon += f'<path class="dash" d="M-24 29 H24" stroke="{VIOLET}" stroke-width="2" stroke-dasharray="4 6"/>'
+app_card("app-greek","Greek Letters Quiz","Learn Greek letters through recognition and alphabet-order quizzes.",["Greek letter recognition", "and alphabet-order", "quizzes."],VIOLET,greek_icon)
+
+armour_icon = f'''<path d="M0 -29 L26 -19 V1 Q24 22 0 33 Q-24 22 -26 1 V-19Z" fill="{MINT}" fill-opacity=".08" stroke="{MINT}" stroke-width="2"/>
+<path d="M0 -20 V22 M-18 -12 H18" fill="none" stroke="{MINT}" stroke-width="2" stroke-opacity=".7"/>
+<path class="spark" d="M-15 1 L-4 12 L16 -8" fill="none" stroke="{GOLD}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'''
+app_card("app-armour","Medieval Armor Quiz","Identify historic armour from images, descriptions, and periods.",["Identify historic armour", "from images, descriptions,", "and periods."],MINT,armour_icon)
+
+roman_icon = f'''<path d="M-5 27 Q-35 4 -17 -24 M5 27 Q35 4 17 -24" fill="none" stroke="{GOLD}" stroke-width="1.7"/>
+<g fill="{GOLD}" fill-opacity=".8">
+<ellipse cx="-23" cy="12" rx="4" ry="8" transform="rotate(-45 -23 12)"/>
+<ellipse cx="-26" cy="-4" rx="4" ry="8" transform="rotate(-25 -26 -4)"/>
+<ellipse cx="-22" cy="-20" rx="4" ry="8" transform="rotate(15 -22 -20)"/>
+<ellipse cx="23" cy="12" rx="4" ry="8" transform="rotate(45 23 12)"/>
+<ellipse cx="26" cy="-4" rx="4" ry="8" transform="rotate(25 26 -4)"/>
+<ellipse cx="22" cy="-20" rx="4" ry="8" transform="rotate(-15 22 -20)"/>
+</g>'''+text(0,10,"III",28,GOLD,500,'class="mono" text-anchor="middle"')
+app_card("app-roman","Roman Emperors Quiz","Identify emperors, recognise portraits, and learn Roman dynasties.",["Identify emperors,", "recognise portraits,", "and learn their dynasties."],GOLD,roman_icon)
+
 body = '<path d="M10 1 H990" stroke="#353047"/>'
 body += text(20,49,"ARTEM SKULIMOVSKIY",12,MUTED,500,'class="mono" letter-spacing="1.5"')
 body += text(20,77,"Backend engineering · Distributed systems · AI",18,INK,500)

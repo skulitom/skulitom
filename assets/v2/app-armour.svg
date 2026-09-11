@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="154" viewBox="0 0 1000 154" role="img" aria-labelledby="title desc">
+<title id="title">Medieval Armor Quiz — on Google Play</title>
+<desc id="desc">Original animated illustration. Motion is disabled when reduced motion is preferred.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171426"/><stop offset="1" stop-color="#0e1423"/></linearGradient>
+  <linearGradient id="rainbow"><stop stop-color="#71efd2"/><stop offset=".5" stop-color="#b496ff"/><stop offset="1" stop-color="#ff7fc8"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#7150ba" stop-opacity=".27"/><stop offset="1" stop-color="#7150ba" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+text{font-family:'Segoe UI',Arial,sans-serif}
+.mono{font-family:Consolas,'Liberation Mono',monospace}
+.float{animation:float 5s ease-in-out infinite}
+.float2{animation:float 6s ease-in-out -2s infinite}
+.orbit{animation:orbit 20s linear infinite;transform-box:fill-box;transform-origin:center}
+.spark{animation:spark 3s ease-in-out infinite}
+.dash{animation:dash 9s linear infinite}
+.blink{animation:blink 4.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.cursor{animation:cursor 1.5s step-end infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes spark{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes dash{to{stroke-dashoffset:-100}}
+@keyframes blink{0%,43%,47%,100%{transform:scaleY(1)}45%{transform:scaleY(.15)}}
+@keyframes cursor{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect x="1" y="1" width="998" height="152" rx="20" fill="url(#bg)" stroke="#353047"/><path d="M23 1 H977" stroke="#71efd2" stroke-width="2"/><g transform="translate(72 77)"><rect x="-42" y="-42" width="84" height="84" rx="19" fill="#71efd2" fill-opacity=".07" stroke="#71efd2" stroke-opacity=".3"/><path d="M0 -29 L26 -19 V1 Q24 22 0 33 Q-24 22 -26 1 V-19Z" fill="#71efd2" fill-opacity=".08" stroke="#71efd2" stroke-width="2"/>
+<path d="M0 -20 V22 M-18 -12 H18" fill="none" stroke="#71efd2" stroke-width="2" stroke-opacity=".7"/>
+<path class="spark" d="M-15 1 L-4 12 L16 -8" fill="none" stroke="#ffcd77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><text x="138" y="56" fill="#f5f1ff" font-size="30" font-weight="650" >Medieval Armor Quiz</text><text x="139" y="88" fill="#b6aecb" font-size="18" font-weight="400" >Identify historic armour from images, descriptions, and periods.</text><text x="139" y="126" fill="#71efd2" font-size="11" font-weight="600" class="mono" letter-spacing="1.2">VIEW ON GOOGLE PLAY</text><path d="M953 125 L966 112 M953 112 H966 V125" fill="none" stroke="#71efd2" stroke-width="2" stroke-linecap="round"/>
+</svg>

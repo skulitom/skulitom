@@ -42,6 +42,18 @@ I use AI coding agents throughout development, from planning and implementation 
 
 [Browse all my repositories →](https://github.com/skulitom?tab=repositories)
 
+## Android apps
+
+I also publish educational quiz apps on Google Play, covering language and history.
+
+<a href="https://play.google.com/store/apps/details?id=com.greekletters.quiz"><picture><source media="(max-width: 600px)" srcset="assets/v2/app-greek-mobile.svg"><img src="assets/v2/app-greek.svg" width="100%" alt="Greek Letters Quiz — learn Greek letters through symbol recognition and alphabet-order quizzes. View on Google Play."></picture></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.armourquiz.medieval"><picture><source media="(max-width: 600px)" srcset="assets/v2/app-armour-mobile.svg"><img src="assets/v2/app-armour.svg" width="100%" alt="Medieval Armor Quiz — identify historic armour from images, descriptions, and historical periods. View on Google Play."></picture></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.romanemperor.quiz"><picture><source media="(max-width: 600px)" srcset="assets/v2/app-roman-mobile.svg"><img src="assets/v2/app-roman.svg" width="100%" alt="Roman Emperors Quiz — identify Roman emperors, recognise their portraits, and learn their dynasties. View on Google Play."></picture></a>
+
+[View my Google Play developer page →](https://play.google.com/store/apps/developer?id=Skulitom)
+
 ## Technical toolkit
 
 **Systems & data** &nbsp; `Python` `SQL` `PostgreSQL` `Docker` `Linux` `Bash`
