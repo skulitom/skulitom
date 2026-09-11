@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="100" viewBox="0 0 1000 100" role="img" aria-labelledby="title desc">
-<title id="title">Thanks for stopping by — see you in the next experiment</title>
+<title id="title">Artem Skulimovskiy — backend engineering, distributed systems, and AI</title>
 <desc id="desc">Original animated illustration. Motion is disabled when reduced motion is preferred.</desc>
 <defs>
   <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171426"/><stop offset="1" stop-color="#0e1423"/></linearGradient>
@@ -24,5 +24,5 @@ text{font-family:'Segoe UI',Arial,sans-serif}
 @keyframes cursor{50%{opacity:0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
-<path d="M10 1 H990" stroke="#353047"/><text x="20" y="49" fill="#b6aecb" font-size="12" font-weight="500" class="mono" letter-spacing="1.5">THANKS FOR STOPPING BY</text><text x="20" y="77" fill="#f5f1ff" font-size="18" font-weight="500" >See you in the next experiment.</text><path d="M637 54 Q727 14 800 54 T978 54" stroke="url(#rainbow)" stroke-width="2" fill="none" stroke-dasharray="5 8" class="dash"/><g transform="translate(780 47) scale(1.3)"><path class="spark" style="animation-delay:0s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#ff7fc8"/></g><g transform="translate(927 61) scale(1)"><path class="spark" style="animation-delay:-1s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#71efd2"/></g><g transform="translate(691 38) scale(0.8)"><path class="spark" style="animation-delay:-2s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#ffcd77"/></g>
+<path d="M10 1 H990" stroke="#353047"/><text x="20" y="49" fill="#b6aecb" font-size="12" font-weight="500" class="mono" letter-spacing="1.5">ARTEM SKULIMOVSKIY</text><text x="20" y="77" fill="#f5f1ff" font-size="18" font-weight="500" >Backend engineering · Distributed systems · AI</text><path d="M637 54 Q727 14 800 54 T978 54" stroke="url(#rainbow)" stroke-width="2" fill="none" stroke-dasharray="5 8" class="dash"/><g transform="translate(780 47) scale(1.3)"><path class="spark" style="animation-delay:0s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#ff7fc8"/></g><g transform="translate(927 61) scale(1)"><path class="spark" style="animation-delay:-1s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#71efd2"/></g><g transform="translate(691 38) scale(0.8)"><path class="spark" style="animation-delay:-2s" d="M0 -7 Q0 0 7 0 Q0 0 0 7 Q0 0 -7 0 Q0 0 0 -7" fill="#ffcd77"/></g>
 </svg>

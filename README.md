@@ -1,18 +1,18 @@
 <picture>
   <source media="(max-width: 600px)" srcset="assets/hello-mobile.svg">
-  <img src="assets/hello.svg" width="100%" alt="Hey, I'm Artem. Software engineer, London. Python systems, AI agents, and creative code — with a little robot exploring a colourful galaxy.">
+  <img src="assets/hello.svg" width="100%" alt="Artem Skulimovskiy — software engineer in London. Backend and infrastructure engineering, distributed systems, and AI.">
 </picture>
 
-I'm a software engineer in London. I build Python backends and distributed systems, and follow curious ideas into AI agents, generative art, and the occasional retro display.
+I'm a London-based software engineer focused on Python, backend infrastructure, and distributed systems. My experience spans production compute platforms, data engineering, and quantitative development.
 
-My current rabbit hole: **long-running agents, persistent state, and figuring out whether the thing we built actually works.**
+My current interests include **LLM agent orchestration, persistent state, and evaluation methods for complex systems.**
 
-## On my workbench
+## Selected projects
 
 <table>
   <tr>
     <td width="50%">
-      <a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/litharness-mobile.svg"><img src="assets/litharness.svg" width="100%" alt="LitHarness — a workshop of AI agents for serial fiction. Planning, world state, drafting, and revision. Explore the repository."></picture></a>
+      <a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/litharness-mobile.svg"><img src="assets/litharness.svg" width="100%" alt="LitHarness — LLM agent orchestration for serial fiction. Planning, persistent state, and revision. View the repository."></picture></a>
     </td>
     <td width="50%">
       <a href="https://github.com/skulitom/Latent-Space-Explorer"><picture><source media="(max-width: 600px)" srcset="assets/latent-space-mobile.svg"><img src="assets/latent-space.svg" width="100%" alt="Latent Space Explorer — steer through generative images with words and WASD. Built with Flux, PyTorch, and Pygame. Explore the repository."></picture></a>
@@ -30,22 +30,22 @@ My current rabbit hole: **long-running agents, persistent state, and figuring ou
 
 [Browse all my repositories →](https://github.com/skulitom?tab=repositories)
 
-## My usual toolkit
+## Technical toolkit
 
 **Systems & data** &nbsp; `Python` `SQL` `PostgreSQL` `Docker` `Linux` `Bash`
 
-**Experiments & interfaces** &nbsp; `PyTorch` `NumPy` `TypeScript` `React`
+**Machine learning & interfaces** &nbsp; `PyTorch` `NumPy` `TypeScript` `React`
 
 <details>
-  <summary>A little more about me</summary>
+  <summary>Professional background</summary>
   <br>
 
 I work on backend and infrastructure engineering at SimCorp, with a background in quantitative computing. Previously: Eigen Technologies, an education startup I founded, and JPMorgan.
 
-I studied Computer Science at UCL, specialising in AI. I like projects that join solid engineering to something you can explore, play with, or make things with.
+I hold an MEng in Computer Science from UCL, where I specialised in AI. My projects apply that background to agent systems, generative models, and interactive applications.
 
 </details>
 
 <br>
 
-<img src="assets/footer.svg" width="100%" alt="Thanks for stopping by. See you in the next experiment.">
+<img src="assets/footer.svg" width="100%" alt="Artem Skulimovskiy — backend engineering, distributed systems, and AI.">
