@@ -5,8 +5,11 @@ The root README appears on [github.com/skulitom](https://github.com/skulitom) be
 - Edit `README.md` to change the introduction, project links, or toolkit.
 - Edit `scripts/generate_assets.py` and run `python scripts/generate_assets.py` to regenerate the illustrations.
 - Commit the generated `assets/v2/*.svg` alongside the script.
+- Run `python scripts/generate_badges.py` to rebuild the toolkit badges in `assets/toolkit/v1/` from the local icon data.
 
-All artwork is original SVG, stored in this repository. It needs no image services, API keys, scheduled workflows, external fonts, or JavaScript. Animations respect the viewer's reduced-motion preference. Browsers without animation support still show complete static artwork. The header has a separate layout for narrow screens.
+All graphics are SVG, stored in this repository. The header and project illustrations are original; the toolkit badges use Simple Icons 16.30.0 brand marks, with original terminal and database symbols for Codex and SQL. The icon source and CC0 license are included in `assets/toolkit/`.
+
+The graphics need no image services, API keys, scheduled workflows, external fonts, or JavaScript. Animations respect the viewer's reduced-motion preference. Browsers without animation support still show complete static artwork. The header has a separate layout for narrow screens; toolkit badges wrap individually to fit the available width.
 
 The project illustrations are decorative representations, not screenshots, live activity, contribution statistics, or project status indicators.
 

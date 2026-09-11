@@ -56,11 +56,29 @@ I also publish educational quiz apps on Google Play, covering language and histo
 
 ## Technical toolkit
 
-**Systems & data** &nbsp; `Python` `SQL` `PostgreSQL` `Docker` `Linux` `Bash`
+<p align="center"><strong>AI &amp; agent tooling</strong></p>
+<p align="center">
+  <img src="assets/toolkit/v1/codex.svg" width="132" height="40" alt="Codex">
+  <img src="assets/toolkit/v1/claude-code.svg" width="132" height="40" alt="Claude Code">
+  <img src="assets/toolkit/v1/pytorch.svg" width="132" height="40" alt="PyTorch">
+  <img src="assets/toolkit/v1/numpy.svg" width="132" height="40" alt="NumPy">
+</p>
 
-**Machine learning & interfaces** &nbsp; `PyTorch` `NumPy` `TypeScript` `React`
+<p align="center"><strong>Languages &amp; interfaces</strong></p>
+<p align="center">
+  <img src="assets/toolkit/v1/python.svg" width="132" height="40" alt="Python">
+  <img src="assets/toolkit/v1/typescript.svg" width="132" height="40" alt="TypeScript">
+  <img src="assets/toolkit/v1/react.svg" width="132" height="40" alt="React">
+  <img src="assets/toolkit/v1/bash.svg" width="132" height="40" alt="Bash">
+</p>
 
-**Agent tooling** &nbsp; `Codex` `Claude Code`
+<p align="center"><strong>Systems &amp; data</strong></p>
+<p align="center">
+  <img src="assets/toolkit/v1/sql.svg" width="132" height="40" alt="SQL">
+  <img src="assets/toolkit/v1/postgresql.svg" width="132" height="40" alt="PostgreSQL">
+  <img src="assets/toolkit/v1/docker.svg" width="132" height="40" alt="Docker">
+  <img src="assets/toolkit/v1/linux.svg" width="132" height="40" alt="Linux">
+</p>
 
 <details>
   <summary>Professional background</summary>
