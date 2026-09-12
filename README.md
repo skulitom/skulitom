@@ -7,33 +7,33 @@ I'm a **backend and infrastructure engineer at SimCorp**, based in London. I des
 
 Previously: **Eigen Technologies · JPMorgan · founder of an education startup.** MEng Computer Science, **UCL**, specialising in AI.
 
-My independent work explores **agent execution environments, persistent state, and learned control systems**. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
+**[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, exploring long-running agent workflows and persistent state. My other projects include agent execution environments and learned control systems. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
 
-**[Portfolio & flight demo →](https://skulitom.github.io/) · [All repositories](https://github.com/skulitom?tab=repositories)**
+**[Portfolio & projects →](https://skulitom.github.io/) · [All repositories](https://github.com/skulitom?tab=repositories)**
 
 ## Selected projects
 
 <table>
 <tr>
 <td width="50%" valign="top">
+<a href="https://github.com/skulitom/LitHarness"><img src="assets/projects/litharness.webp" width="100%" alt="LitHarness project artwork: a constellation dragon and an open book."></a>
+<h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a> · Main project</h3>
+<p>Specialised LLM agents coordinate serial fiction over persistent narrative state and immutable manuscript revisions. Working generation pipeline; literary-quality evaluation remains an open research problem.</p>
+<p><strong>Python · Agent orchestration · Persistent state</strong></p>
+</td>
+<td width="50%" valign="top">
 <a href="https://github.com/skulitom/Anode"><img src="assets/projects/anode.svg" width="100%" alt="Anode architecture: separate input sessions for you and an agent on the same Windows machine."></a>
 <h3><a href="https://github.com/skulitom/Anode">Anode</a></h3>
 <p>A Windows child session for an agent, with its own pointer, focus, CLI, MCP controls, and virtual gamepad. Runs as the same user and can access the same files.</p>
 <p><strong>C# · .NET · Windows APIs · MCP</strong></p>
 </td>
-<td width="50%" valign="top">
-<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-simulator.png" width="100%" alt="Haltere training simulator: neural activity alongside a simulated quadrotor. The portfolio links to the separate Liftoff flight recording."></a>
-<h3><a href="https://github.com/skulitom/haltere">Haltere</a></h3>
-<p>A connectome-constrained recurrent network trained to control a drone in Liftoff. A recorded 40-second hover achieved 0.34 m mean position error. Research prototype; racing speed remains limited.</p>
-<p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a></p>
-</td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/LitHarness"><img src="assets/projects/litharness.webp" width="100%" alt="LitHarness project artwork: a constellation dragon and an open book."></a>
-<h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a></h3>
-<p>Specialised LLM agents coordinate serial fiction over persistent narrative state and immutable manuscript revisions. Working generation pipeline; literary-quality evaluation remains an open research problem.</p>
-<p><strong>Python · Agent orchestration · Persistent state</strong></p>
+<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-liftoff-race.png" width="100%" alt="Haltere in Liftoff: the latest lap-following recording, with live neural activity on the left and the game view on the right."></a>
+<h3><a href="https://github.com/skulitom/haltere">Haltere</a></h3>
+<p>A connectome-constrained recurrent network trained to control a drone in Liftoff. The latest lap-following controller tracks a taught path at 1.5 m/s with 0.67 m mean error. Research prototype; racing speed remains limited.</p>
+<p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a></p>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/AgentUI"><img src="assets/projects/agentui.svg" width="100%" alt="AgentUI interaction diagram: an agent opens controls, a person adjusts them, and the response returns as structured state."></a>
