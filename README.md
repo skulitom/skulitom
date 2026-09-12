@@ -16,7 +16,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/LitHarness"><img src="assets/projects/litharness.webp" width="100%" alt="LitHarness project artwork: a constellation dragon and an open book."></a>
+<a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/v2/litharness-mobile.svg"><img src="assets/v2/litharness.svg" width="100%" alt="LitHarness — LLM agent orchestration for serial fiction. Planning, persistent state, and revision. View the repository."></picture></a>
 <h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a> · Main project</h3>
 <p>Specialised LLM agents coordinate serial fiction over persistent narrative state and immutable manuscript revisions. Working generation pipeline; literary-quality evaluation remains an open research problem.</p>
 <p><strong>Python · Agent orchestration · Persistent state</strong></p>
@@ -36,7 +36,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/AgentUI"><img src="assets/projects/agentui.svg" width="100%" alt="AgentUI interaction diagram: an agent opens controls, a person adjusts them, and the response returns as structured state."></a>
+<a href="https://github.com/skulitom/AgentUI"><picture><source media="(max-width: 600px)" srcset="assets/v2/agentui-mobile.svg"><img src="assets/v2/agentui.svg" width="100%" alt="AgentUI — an MCP server providing interactive controls for coding agents, including forms, sliders, diffs, and live previews. View the repository."></picture></a>
 <h3><a href="https://github.com/skulitom/AgentUI">AgentUI</a></h3>
 <p>An MCP server that lets coding agents ask for decisions through forms, sliders, diffs, and live previews. The agent can continue working while a person adjusts the controls.</p>
 <p><strong>TypeScript · React · MCP · WebSockets</strong></p>
@@ -50,7 +50,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <p><strong>Rust · wgpu · WGSL</strong><br><a href="https://skulitom.github.io/#primordia">Watch the simulations →</a></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/CathodeDisplay"><img src="assets/projects/cathode.webp" width="100%" alt="Cathode application screenshot with a CRT virtual display and picture controls."></a>
+<a href="https://github.com/skulitom/CathodeDisplay"><picture><source media="(max-width: 600px)" srcset="assets/v2/cathode-mobile.svg"><img src="assets/v2/cathode.svg" width="100%" alt="Cathode — a retro CRT virtual monitor for real Windows apps. Phosphor pixels, scanlines, and glow. Explore the repository."></picture></a>
 <h3><a href="https://github.com/skulitom/CathodeDisplay">Cathode</a></h3>
 <p>A CRT virtual monitor for real Windows applications, with GPU phosphor rendering, scanlines, and glow. Available as a self-contained Windows download.</p>
 <p><strong>C# · WPF · GPU shaders</strong><br><a href="https://github.com/skulitom/CathodeDisplay/releases/latest">Download →</a></p>
@@ -68,6 +68,44 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 
 **Generative-model experiment:** [Latent Space Explorer](https://github.com/skulitom/Latent-Space-Explorer)
 
-**Published Android apps:** [Greek Letters Quiz](https://play.google.com/store/apps/details?id=com.greekletters.quiz) · [Medieval Armor Quiz](https://play.google.com/store/apps/details?id=com.armourquiz.medieval) · [Roman Emperors Quiz](https://play.google.com/store/apps/details?id=com.romanemperor.quiz)
+## Android apps
 
-**Core toolkit:** Python · SQL · PostgreSQL · Docker · Linux. Project work also uses TypeScript, React, C#, Rust, and PyTorch.
+I also publish educational quiz apps on Google Play, covering language and history.
+
+<a href="https://play.google.com/store/apps/details?id=com.greekletters.quiz"><picture><source media="(max-width: 600px)" srcset="assets/v2/app-greek-mobile.svg"><img src="assets/v2/app-greek.svg" width="100%" alt="Greek Letters Quiz — learn Greek letters through symbol recognition and alphabet-order quizzes. View on Google Play."></picture></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.armourquiz.medieval"><picture><source media="(max-width: 600px)" srcset="assets/v2/app-armour-mobile.svg"><img src="assets/v2/app-armour.svg" width="100%" alt="Medieval Armor Quiz — identify historic armour from images, descriptions, and historical periods. View on Google Play."></picture></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.romanemperor.quiz"><picture><source media="(max-width: 600px)" srcset="assets/v2/app-roman-mobile.svg"><img src="assets/v2/app-roman.svg" width="100%" alt="Roman Emperors Quiz — identify Roman emperors, recognise their portraits, and learn their dynasties. View on Google Play."></picture></a>
+
+[View my Google Play developer page →](https://play.google.com/store/apps/developer?id=Skulitom)
+
+## Technical toolkit
+
+<p align="center"><strong>AI &amp; agent tooling</strong></p>
+<p align="center">
+  <img src="assets/toolkit/v1/codex.svg" width="132" height="40" alt="Codex">
+  <img src="assets/toolkit/v1/claude-code.svg" width="132" height="40" alt="Claude Code">
+  <img src="assets/toolkit/v1/pytorch.svg" width="132" height="40" alt="PyTorch">
+  <img src="assets/toolkit/v1/numpy.svg" width="132" height="40" alt="NumPy">
+</p>
+
+<p align="center"><strong>Languages &amp; interfaces</strong></p>
+<p align="center">
+  <img src="assets/toolkit/v1/python.svg" width="132" height="40" alt="Python">
+  <img src="assets/toolkit/v1/typescript.svg" width="132" height="40" alt="TypeScript">
+  <img src="assets/toolkit/v1/react.svg" width="132" height="40" alt="React">
+  <img src="assets/toolkit/v1/bash.svg" width="132" height="40" alt="Bash">
+</p>
+
+<p align="center"><strong>Systems &amp; data</strong></p>
+<p align="center">
+  <img src="assets/toolkit/v1/sql.svg" width="132" height="40" alt="SQL">
+  <img src="assets/toolkit/v1/postgresql.svg" width="132" height="40" alt="PostgreSQL">
+  <img src="assets/toolkit/v1/docker.svg" width="132" height="40" alt="Docker">
+  <img src="assets/toolkit/v1/linux.svg" width="132" height="40" alt="Linux">
+</p>
+
+<br>
+
+<img src="assets/v2/footer.svg" width="100%" alt="Artem Skulimovskiy — backend engineering, distributed systems, and AI.">
