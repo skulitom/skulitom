@@ -58,10 +58,6 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 </tr>
 </table>
 
-## Open-source contribution
-
-**[AnyIO: fix imports with loaders that omit `__file__`](https://github.com/agronholm/anyio/pull/1323) — merged.** Fixed an import failure by extending the existing eager-import fallback, with a regression test that fails without the change.
-
 ## More to explore
 
 **Interactive web apps:** [Export Atlas](https://skulitom.github.io/export-atlas/) · [London in minutes](https://skulitom.github.io/london-time-map/) · [Chinese Touch Typing](https://skulitom.github.io/chinese-touch-typing/) · [Chinese Radicals](https://skulitom.github.io/chinese-radicals/)

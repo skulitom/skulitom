@@ -5,6 +5,7 @@ The root README appears on [github.com/skulitom](https://github.com/skulitom) be
 - Edit `README.md` to change the introduction, project links, or toolkit.
 - Keep the animated illustrations and grouped custom skill pills when refreshing profile content; Artem explicitly prefers this visual style.
 - Keep LitHarness first as the main project, and use the latest Liftoff recording for Haltere's preview.
+- Do not feature open-source contributions in the profile or portfolio; Artem prefers to leave them out.
 - Edit `scripts/generate_assets.py` and run `python scripts/generate_assets.py` to regenerate the illustrations.
 - Commit the generated `assets/v2/*.svg` alongside the script.
 - Run `python scripts/generate_badges.py` to rebuild the toolkit badges in `assets/toolkit/v1/` from the local icon data.
