@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="266" height="80" viewBox="0 0 266 80" role="img" aria-labelledby="title desc">
+<title id="title">Chinese Touch Typing</title><desc id="desc">Practise Mandarin pinyin. Original animated pixel art; reduced-motion preferences disable animation.</desc>
+
+<g shape-rendering="crispEdges">
+<path d="M9 3h248v4h4v4h4v54h-4v4h-4v4H9v-4H5v-4H1V11h4V7h4z" fill="#121826" stroke="#f3cc88" stroke-opacity=".55"/>
+<path d="M9 5h42v2H9M3 11h2v14H3M257 65h4v2h-4m-10 4h10v2h-10" fill="#f3cc88" fill-opacity=".65"/>
+<g transform="translate(13 19) scale(2)" style="--delay:12s">
+<path d="M2 4h16v1h2v12h-2v1H2v-1H0V5h2z" fill="#f3cc88"/>
+<path d="M1 6h18v10H1z" fill="#403729"/>
+<path d="M3 7h2v2H3m4-2h2v2H7m4-2h2v2h-2m4-2h2v2h-2M3 11h2v2H3m4-2h2v2H7m4-2h2v2h-2m4-2h2v2h-2M6 14h8v1H6" fill="#af986d"/>
+<g fill="#fff1d2"><path class="move key-a" opacity="0" d="M3 7h2v2H3"/><path class="move key-b" opacity="0" d="M11 11h2v2h-2"/><path class="move key-c" opacity="0" d="M6 14h8v1H6"/></g>
+<path d="M9 1h2v2H9" fill="#f3cc88"/>
+</g>
+<path d="M242 20h9v9h-2v-5l-7 7-2-2 7-7h-5z" fill="#f3cc88"/>
+</g>
+<text x="62" y="34" font-family="Consolas,'Liberation Mono',monospace" font-size="13.5" font-weight="700" fill="#eef1f8">Chinese Touch Typing</text>
+<text x="62" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b4bed0">Practise Mandarin pinyin</text>
+</svg>

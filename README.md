@@ -4,7 +4,7 @@
 </picture>
 
 <p>
-<a href="https://skulitom.github.io/"><img src="assets/links/v1/portfolio.svg" width="400" alt="Explore my portfolio — projects, demos and writing samples"></a>
+<a href="https://skulitom.github.io/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/portfolio.svg"><img src="assets/links/v2/portfolio.svg" width="400" alt="Explore my portfolio — projects, demos and writing samples"></picture></a>
 </p>
 
 I'm a **backend and infrastructure engineer at SimCorp**, based in London. I design and operate distributed calculation infrastructure, from worker coordination and batch scheduling to the data layer and failure investigation.
@@ -67,12 +67,12 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 Explore maps, practise Chinese, and back up your song lists.
 
 <p>
-<a href="https://skulitom.github.io/MapLanguageVisualizer/"><img src="assets/links/v1/world-language-map.svg" width="266" alt="World Language Map — Languages around the world. Open the web app."></a>
-<a href="https://skulitom.github.io/export-atlas/"><img src="assets/links/v1/export-atlas.svg" width="266" alt="Export Atlas — Explore goods, services &amp; trade. Open the web app."></a>
-<a href="https://skulitom.github.io/london-time-map/"><img src="assets/links/v1/london-in-minutes.svg" width="266" alt="London in minutes — Compare journey times. Open the web app."></a>
-<a href="https://skulitom.github.io/chinese-touch-typing/"><img src="assets/links/v1/chinese-touch-typing.svg" width="266" alt="Chinese Touch Typing — Practise Mandarin pinyin. Open the web app."></a>
-<a href="https://skulitom.github.io/chinese-radicals/"><img src="assets/links/v1/chinese-radicals.svg" width="266" alt="Chinese Radicals — Learn radicals &amp; characters. Open the web app."></a>
-<a href="https://skulitom.github.io/spotify-library-vault/"><img src="assets/links/v1/keepsake.svg" width="266" alt="Keepsake — Back up your song lists. Open the web app."></a>
+<a href="https://skulitom.github.io/MapLanguageVisualizer/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/world-language-map.svg"><img src="assets/links/v2/world-language-map.svg" width="266" alt="World Language Map — Languages around the world. Open the web app."></picture></a>
+<a href="https://skulitom.github.io/export-atlas/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/export-atlas.svg"><img src="assets/links/v2/export-atlas.svg" width="266" alt="Export Atlas — Explore goods, services &amp; trade. Open the web app."></picture></a>
+<a href="https://skulitom.github.io/london-time-map/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/london-in-minutes.svg"><img src="assets/links/v2/london-in-minutes.svg" width="266" alt="London in minutes — Compare journey times. Open the web app."></picture></a>
+<a href="https://skulitom.github.io/chinese-touch-typing/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/chinese-touch-typing.svg"><img src="assets/links/v2/chinese-touch-typing.svg" width="266" alt="Chinese Touch Typing — Practise Mandarin pinyin. Open the web app."></picture></a>
+<a href="https://skulitom.github.io/chinese-radicals/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/chinese-radicals.svg"><img src="assets/links/v2/chinese-radicals.svg" width="266" alt="Chinese Radicals — Learn radicals &amp; characters. Open the web app."></picture></a>
+<a href="https://skulitom.github.io/spotify-library-vault/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v2/static/keepsake.svg"><img src="assets/links/v2/keepsake.svg" width="266" alt="Keepsake — Back up your song lists. Open the web app."></picture></a>
 </p>
 
 <details>
