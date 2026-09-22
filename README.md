@@ -7,9 +7,9 @@ I'm a **backend and infrastructure engineer at SimCorp**, based in London. I des
 
 Previously: **Eigen Technologies · JPMorgan · founder of an education startup.** MEng Computer Science, **UCL**, specialising in AI.
 
-**[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, exploring long-running agent workflows and persistent state. My other projects include agent execution environments and learned control systems. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
+**[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, an AI system that plans, writes, and checks long-form fiction. My other projects help agents use computers and explore learned control systems. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
 
-**[Portfolio & projects →](https://skulitom.github.io/) · [All repositories](https://github.com/skulitom?tab=repositories)**
+**[Portfolio & projects →](https://skulitom.github.io/) · [All repositories](https://github.com/skulitom?tab=repositories) · [Connect on LinkedIn](https://www.linkedin.com/in/artem-skulimovskiy-7bb028118/)**
 
 ## Selected projects
 
@@ -18,13 +18,13 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/v2/litharness-mobile.svg"><img src="assets/v2/litharness.svg" width="100%" alt="LitHarness — LLM agent orchestration for serial fiction. Planning, persistent state, and revision. View the repository."></picture></a>
 <h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a> · Main project</h3>
-<p>Specialised LLM agents coordinate serial fiction over persistent narrative state and immutable manuscript revisions. Working generation pipeline; literary-quality evaluation remains an open research problem.</p>
-<p><strong>Python · Agent orchestration · Persistent state</strong></p>
+<p>Turns a story idea into a world, chapter plans, and a growing manuscript. Tracks continuity and saves every accepted revision. The generation pipeline works; literary-quality evaluation remains an open research problem.</p>
+<p><strong>Python · Agent orchestration · Persistent state</strong><br><a href="https://skulitom.github.io/litharness.html">Walkthrough &amp; writing sample →</a></p>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/Anode"><img src="assets/projects/anode.svg" width="100%" alt="Anode architecture: separate input sessions for you and an agent on the same Windows machine."></a>
 <h3><a href="https://github.com/skulitom/Anode">Anode</a></h3>
-<p>A Windows child session for an agent, with its own pointer, focus, CLI, MCP controls, and virtual gamepad. Runs as the same user and can access the same files.</p>
+<p>Gives an AI agent its own Windows desktop while you keep using your PC. Includes separate input focus, automation controls, and a virtual gamepad. Runs as the same user with access to the same files.</p>
 <p><strong>C# · .NET · Windows APIs · MCP</strong></p>
 </td>
 </tr>
@@ -38,7 +38,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/AgentUI"><picture><source media="(max-width: 600px)" srcset="assets/v2/agentui-mobile.svg"><img src="assets/v2/agentui.svg" width="100%" alt="AgentUI — an MCP server providing interactive controls for coding agents, including forms, sliders, diffs, and live previews. View the repository."></picture></a>
 <h3><a href="https://github.com/skulitom/AgentUI">AgentUI</a></h3>
-<p>An MCP server that lets coding agents ask for decisions through forms, sliders, diffs, and live previews. The agent can continue working while a person adjusts the controls.</p>
+<p>Guide a coding agent with forms, sliders, diffs, and live previews. The agent keeps working while you adjust the controls, then collects your decisions through MCP.</p>
 <p><strong>TypeScript · React · MCP · WebSockets</strong></p>
 </td>
 </tr>
@@ -64,9 +64,14 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 
 **Tools:** [Keepsake](https://skulitom.github.io/spotify-library-vault/) — Spotify metadata backups and optional local YouTube Music migration · [Unsung](https://skulitom.github.io/unsung/) — repository discovery grounded in engineering evidence.
 
+<details>
+<summary>Maps, learning tools &amp; earlier experiments (6 projects)</summary>
+
 **Interactive web apps:** [World Language Map](https://skulitom.github.io/MapLanguageVisualizer/) · [Export Atlas](https://skulitom.github.io/export-atlas/) · [London in minutes](https://skulitom.github.io/london-time-map/) · [Chinese Touch Typing](https://skulitom.github.io/chinese-touch-typing/) · [Chinese Radicals](https://skulitom.github.io/chinese-radicals/)
 
 **Generative-model experiment:** [Latent Space Explorer](https://github.com/skulitom/Latent-Space-Explorer)
+
+</details>
 
 ## Android apps
 

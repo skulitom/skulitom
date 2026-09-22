@@ -21,3 +21,5 @@ GitHub documentation: [Managing your profile README](https://docs.github.com/en/
 When changing graphics, use a new version directory and update the README image paths so browsers do not reuse an older cached image.
 
 When refreshing results, verify the project’s current README and evidence links. Date experimental claims, distinguish the recorded controller from newer results, and check section anchors. The 22 September 2026 refresh adds Ganglion, Glossia, Keepsake, Unsung, and World Language Map; Primordia has five worlds and 42 presets.
+
+Lead project descriptions with what someone can do or read, then explain the technology. Link LitHarness to the portfolio walkthrough and recorded writing sample. Keep the four supporting agent/tool projects visible and the six maps, learning tools and earlier experiments in the expandable section. The verified professional contact is https://www.linkedin.com/in/artem-skulimovskiy-7bb028118/.
