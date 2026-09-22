@@ -19,3 +19,5 @@ The project illustrations are decorative representations, not screenshots, live 
 GitHub documentation: [Managing your profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
 
 When changing graphics, use a new version directory and update the README image paths so browsers do not reuse an older cached image.
+
+When refreshing results, verify the project’s current README and evidence links. Date experimental claims, distinguish the recorded controller from newer results, and check section anchors. The 22 September 2026 refresh adds Ganglion, Glossia, Keepsake, Unsung, and World Language Map; Primordia has five worlds and 42 presets.

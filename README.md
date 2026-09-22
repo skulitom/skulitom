@@ -30,10 +30,10 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-liftoff-race.png" width="100%" alt="Haltere in Liftoff: the latest lap-following recording, with live neural activity on the left and the game view on the right."></a>
+<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-figure8-20260920.png" width="100%" alt="Haltere in Liftoff: a scripted figure-eight with yaw assistance, beside live neural activity, recorded on 20 September 2026."></a>
 <h3><a href="https://github.com/skulitom/haltere">Haltere</a></h3>
-<p>A connectome-constrained recurrent network trained to control a drone in Liftoff. The latest lap-following controller tracks a taught path at 1.5 m/s with 0.67 m mean error. Research prototype; racing speed remains limited.</p>
-<p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a></p>
+<p>A 30,000-neuron connectome-constrained network for drone control in Liftoff. As of 22 September 2026, an experimental controller with visual race-cue assistance has completed three-lap races on two seen courses. Unseen-course completion remains unproven.</p>
+<p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a> · <a href="https://github.com/skulitom/haltere#current-status">Current results</a></p>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/AgentUI"><picture><source media="(max-width: 600px)" srcset="assets/v2/agentui-mobile.svg"><img src="assets/v2/agentui.svg" width="100%" alt="AgentUI — an MCP server providing interactive controls for coding agents, including forms, sliders, diffs, and live previews. View the repository."></picture></a>
@@ -46,7 +46,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/primordia"><img src="assets/projects/primordia.webp" width="100%" alt="Actual Primordia simulation output: Physarum, Particle Life, Lenia, and reaction–diffusion."></a>
 <h3><a href="https://github.com/skulitom/primordia">Primordia</a></h3>
-<p>An interactive GPU artificial-life laboratory: four simulation systems, 36 presets, and headless image and video export.</p>
+<p>An interactive GPU artificial-life laboratory: five worlds, 42 presets, saved discoveries, live measurements, and headless image and video export. The new Symbiosis world couples agents and chemistry.</p>
 <p><strong>Rust · wgpu · WGSL</strong><br><a href="https://skulitom.github.io/#primordia">Watch the simulations →</a></p>
 </td>
 <td width="50%" valign="top">
@@ -60,7 +60,11 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 
 ## More to explore
 
-**Interactive web apps:** [Export Atlas](https://skulitom.github.io/export-atlas/) · [London in minutes](https://skulitom.github.io/london-time-map/) · [Chinese Touch Typing](https://skulitom.github.io/chinese-touch-typing/) · [Chinese Radicals](https://skulitom.github.io/chinese-radicals/)
+**Agent & language experiments:** [Ganglion](https://github.com/skulitom/Ganglion) — supervised cursor control and fly-connectome experiments · [Glossia](https://github.com/skulitom/glossia) — language evolution and agent communication.
+
+**Tools:** [Keepsake](https://skulitom.github.io/spotify-library-vault/) — Spotify metadata backups and optional local YouTube Music migration · [Unsung](https://skulitom.github.io/unsung/) — repository discovery grounded in engineering evidence.
+
+**Interactive web apps:** [World Language Map](https://skulitom.github.io/MapLanguageVisualizer/) · [Export Atlas](https://skulitom.github.io/export-atlas/) · [London in minutes](https://skulitom.github.io/london-time-map/) · [Chinese Touch Typing](https://skulitom.github.io/chinese-touch-typing/) · [Chinese Radicals](https://skulitom.github.io/chinese-radicals/)
 
 **Generative-model experiment:** [Latent Space Explorer](https://github.com/skulitom/Latent-Space-Explorer)
 
