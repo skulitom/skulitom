@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="266" height="80" viewBox="0 0 266 80" role="img" aria-labelledby="title desc">
+<title id="title">Chinese Radicals</title>
+<desc id="desc">Learn radicals &amp; characters. Open the web app.</desc>
+<rect x="1" y="3" width="264" height="70" rx="13" fill="#121826" stroke="#f3a5bc" stroke-opacity=".48"/>
+<rect x="13" y="19" width="38" height="38" rx="11" fill="#f3a5bc" fill-opacity=".11"/>
+<g transform="translate(20 26)" fill="none" stroke="#f3a5bc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14M12 2v18M3 10h18M12 10c-2 4-5 7-9 9M12 10c2 4 5 7 9 9"/></g>
+<g font-family="'Segoe UI',Arial,sans-serif">
+<text x="62" y="34" font-size="15" font-weight="600" fill="#eef1f8">Chinese Radicals</text>
+<text x="62" y="54" font-size="11.5" fill="#b4bed0">Learn radicals &amp; characters</text>
+</g>
+<path d="M242 21h8v8m-8 0 8-8" fill="none" stroke="#f3a5bc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

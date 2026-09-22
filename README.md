@@ -3,13 +3,17 @@
   <img src="assets/v2/hello.svg" width="100%" alt="Artem Skulimovskiy — software engineer in London. Backend infrastructure, distributed systems, and applied AI.">
 </picture>
 
+<p>
+<a href="https://skulitom.github.io/"><img src="assets/links/v1/portfolio.svg" width="400" alt="Explore my portfolio — projects, demos and writing samples"></a>
+</p>
+
 I'm a **backend and infrastructure engineer at SimCorp**, based in London. I design and operate distributed calculation infrastructure, from worker coordination and batch scheduling to the data layer and failure investigation.
 
 Previously: **Eigen Technologies · JPMorgan · founder of an education startup.** MEng Computer Science, **UCL**, specialising in AI.
 
 **[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, an AI system that plans, writes, and checks long-form fiction. My other projects help agents use computers and explore learned control systems. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
 
-**[Portfolio & projects →](https://skulitom.github.io/) · [All repositories](https://github.com/skulitom?tab=repositories) · [Connect on LinkedIn](https://www.linkedin.com/in/artem-skulimovskiy-7bb028118/)**
+[All repositories](https://github.com/skulitom?tab=repositories) · [Connect on LinkedIn](https://www.linkedin.com/in/artem-skulimovskiy-7bb028118/)
 
 ## Selected projects
 
@@ -58,18 +62,23 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 </tr>
 </table>
 
-## More to explore
+## Interactive web apps
 
-**Agent & language experiments:** [Ganglion](https://github.com/skulitom/Ganglion) — supervised cursor control and fly-connectome experiments · [Glossia](https://github.com/skulitom/glossia) — language evolution and agent communication.
+Explore maps, practise Chinese, and back up your song lists.
 
-**Tools:** [Keepsake](https://skulitom.github.io/spotify-library-vault/) — Spotify metadata backups and optional local YouTube Music migration · [Unsung](https://skulitom.github.io/unsung/) — repository discovery grounded in engineering evidence.
+<p>
+<a href="https://skulitom.github.io/MapLanguageVisualizer/"><img src="assets/links/v1/world-language-map.svg" width="266" alt="World Language Map — Languages around the world. Open the web app."></a>
+<a href="https://skulitom.github.io/export-atlas/"><img src="assets/links/v1/export-atlas.svg" width="266" alt="Export Atlas — Explore goods, services &amp; trade. Open the web app."></a>
+<a href="https://skulitom.github.io/london-time-map/"><img src="assets/links/v1/london-in-minutes.svg" width="266" alt="London in minutes — Compare journey times. Open the web app."></a>
+<a href="https://skulitom.github.io/chinese-touch-typing/"><img src="assets/links/v1/chinese-touch-typing.svg" width="266" alt="Chinese Touch Typing — Practise Mandarin pinyin. Open the web app."></a>
+<a href="https://skulitom.github.io/chinese-radicals/"><img src="assets/links/v1/chinese-radicals.svg" width="266" alt="Chinese Radicals — Learn radicals &amp; characters. Open the web app."></a>
+<a href="https://skulitom.github.io/spotify-library-vault/"><img src="assets/links/v1/keepsake.svg" width="266" alt="Keepsake — Back up your song lists. Open the web app."></a>
+</p>
 
 <details>
-<summary>Maps, learning tools &amp; earlier experiments (6 projects)</summary>
+<summary>Earlier experiments</summary>
 
-**Interactive web apps:** [World Language Map](https://skulitom.github.io/MapLanguageVisualizer/) · [Export Atlas](https://skulitom.github.io/export-atlas/) · [London in minutes](https://skulitom.github.io/london-time-map/) · [Chinese Touch Typing](https://skulitom.github.io/chinese-touch-typing/) · [Chinese Radicals](https://skulitom.github.io/chinese-radicals/)
-
-**Generative-model experiment:** [Latent Space Explorer](https://github.com/skulitom/Latent-Space-Explorer)
+[Latent Space Explorer](https://github.com/skulitom/Latent-Space-Explorer) — an experiment in steering generative images through semantic directions.
 
 </details>
 

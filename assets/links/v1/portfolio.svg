@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="88" viewBox="0 0 400 88" role="img" aria-labelledby="title desc">
+<title id="title">Explore my portfolio</title>
+<desc id="desc">Projects, demos and writing samples by Artem Skulimovskiy. Open skulitom.github.io.</desc>
+<rect x="1" y="4" width="398" height="76" rx="16" fill="#a7f3d0" stroke="#caffdf"/>
+<rect x="17" y="22" width="40" height="40" rx="12" fill="#102e25" fill-opacity=".10"/>
+<g transform="translate(25 30)" fill="none" stroke="#123e2d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<rect x="1" y="2" width="22" height="19" rx="3"/><path d="M1 8h22M5 5h.1M8 5h.1M8 12l-3 3 3 3M16 12l3 3-3 3"/>
+</g>
+<g font-family="'Segoe UI',Arial,sans-serif" fill="#102e25">
+<text x="72" y="37" font-size="23" font-weight="700">Explore my portfolio</text>
+<text x="72" y="59" font-size="13.5">Projects, demos &amp; writing samples</text>
+</g>
+<circle cx="370" cy="42" r="16" fill="#102e25" fill-opacity=".10"/>
+<path d="M363 42h14m-6-6 6 6-6 6" fill="none" stroke="#123e2d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

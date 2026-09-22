@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="266" height="80" viewBox="0 0 266 80" role="img" aria-labelledby="title desc">
+<title id="title">Export Atlas</title>
+<desc id="desc">Explore goods, services &amp; trade. Open the web app.</desc>
+<rect x="1" y="3" width="264" height="70" rx="13" fill="#121826" stroke="#a7f3d0" stroke-opacity=".48"/>
+<rect x="13" y="19" width="38" height="38" rx="11" fill="#a7f3d0" fill-opacity=".11"/>
+<g transform="translate(20 26)" fill="none" stroke="#a7f3d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12h4v8M10 20V8h4v12M16 20V4h4v16M3 5h7M7 2l3 3-3 3"/></g>
+<g font-family="'Segoe UI',Arial,sans-serif">
+<text x="62" y="34" font-size="15" font-weight="600" fill="#eef1f8">Export Atlas</text>
+<text x="62" y="54" font-size="11.5" fill="#b4bed0">Explore goods, services &amp; trade</text>
+</g>
+<path d="M242 21h8v8m-8 0 8-8" fill="none" stroke="#a7f3d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
