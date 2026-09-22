@@ -25,3 +25,5 @@ The existing Primordia reel and poster show its four original worlds; the projec
 The current `assets/links/v2/` buttons use original pixel artwork from `scripts/generate_pixel_buttons.py`: a turning globe, container ship, London train, typing keyboard, Chinese radical, cassette reels, and a miniature terminal. Animations are brief and staggered, and respect reduced-motion preferences. Text and frames remain stationary. No external graphics, fonts, or animation services are used.
 
 Each v2 button includes a matching static variant selected by the README’s `<picture>` media query for reduced-motion preferences.
+
+The current `assets/links/v3/` reuses the original pixel scenes in compact, rounded panels matching the profile header. The portfolio button shares the dark palette and typeface. Web-app tiles include narrow variants and corresponding still images for reduced motion. All versions are built by `scripts/generate_pixel_buttons.py`; older published assets remain available for cached pages.

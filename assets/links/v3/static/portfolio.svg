@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="64" viewBox="0 0 280 64" role="img" aria-labelledby="title desc">
+<title id="title">Explore my portfolio</title><desc id="desc">Projects, demos and writing samples by Artem Skulimovskiy. Original pixel terminal; reduced-motion preferences disable animation.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171426"/><stop offset="1" stop-color="#0e1423"/></linearGradient></defs>
+
+<rect x="1" y="2" width="278" height="58" rx="12" fill="url(#bg)" stroke="#71efd2" stroke-opacity=".5"/>
+<g shape-rendering="crispEdges">
+<g transform="translate(12 17) scale(1.4)">
+<path d="M1 0h18v1h1v16H0V1h1zM8 16h4v3H8M5 19h10v1H5" fill="#71efd2"/>
+<path d="M2 2h16v12H2z" fill="#0b1d18"/>
+<path d="M3 4h1v1h1v1H4v1H3V6h1V5H3z" fill="#71efd2"/>
+<g transform="translate(7 5)"><path class="move terminal-line" d="M0 0h8v1H0M0 3h6v1H0" fill="#71efd2"/></g>
+<path class="move terminal-cursor" d="M3 11h3v1H3" fill="#71efd2"/><path d="M16 15h2v1h-2" fill="#123e2d"/>
+</g>
+</g>
+<path d="M249 30h14m-5-5 5 5-5 5" fill="none" stroke="#71efd2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g font-family="'Segoe UI',Arial,sans-serif"><text x="51" y="28" font-size="16" font-weight="600" fill="#f5f1ff">Explore my portfolio</text>
+<text x="51" y="46" font-size="11" fill="#b6aecb">Projects, demos &amp; writing samples</text></g>
+</svg>

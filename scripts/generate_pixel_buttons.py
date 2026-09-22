@@ -2,11 +2,11 @@
 from html import escape
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[1] / 'assets' / 'links' / 'v2'
+OUT = Path(__file__).resolve().parents[1] / 'assets' / 'links' / 'v3'
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT / 'static').mkdir(exist_ok=True)
 
-# Artwork uses a 20 x 20 grid displayed at 2x. Motion occupies 2.4 seconds
+# Artwork uses a 20 x 20 grid with crisp pixel edges. Motion occupies 2.4 seconds
 # per cycle; positive delays separate the six apps by four seconds.
 CSS = '''
 .move{animation-duration:24s;animation-iteration-count:infinite;animation-delay:var(--delay,0s);animation-timing-function:steps(8,end)}
@@ -85,40 +85,46 @@ BUTTONS = [
 ]
 
 for index, (slug, title, description, accent, scene) in enumerate(BUTTONS):
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="266" height="80" viewBox="0 0 266 80" role="img" aria-labelledby="title desc">
+    lines = {
+        'world-language-map': ['World Language', 'Map'],
+        'export-atlas': ['Export Atlas'],
+        'london-in-minutes': ['London', 'in minutes'],
+        'chinese-touch-typing': ['Chinese', 'Touch Typing'],
+        'chinese-radicals': ['Chinese', 'Radicals'],
+        'keepsake': ['Keepsake'],
+    }[slug]
+    for variant, width in [('', 136), ('-narrow', 112)]:
+        text = ''.join(f'<text x="{width / 2}" y="{(56 + i * 15) if len(lines) == 2 else 64}" text-anchor="middle">{escape(line)}</text>' for i, line in enumerate(lines))
+        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="84" viewBox="0 0 {width} 84" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(description)}. Original animated pixel art; reduced-motion preferences disable animation.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171426"/><stop offset="1" stop-color="#0e1423"/></linearGradient></defs>
 <style>{CSS}</style>
-<g shape-rendering="crispEdges">
-<path d="M9 3h248v4h4v4h4v54h-4v4h-4v4H9v-4H5v-4H1V11h4V7h4z" fill="#121826" stroke="{accent}" stroke-opacity=".55"/>
-<path d="M9 5h42v2H9M3 11h2v14H3M257 65h4v2h-4m-10 4h10v2h-10" fill="{accent}" fill-opacity=".65"/>
-<g transform="translate(13 19) scale(2)" style="--delay:{index * 4}s">{scene}</g>
-<path d="M242 20h9v9h-2v-5l-7 7-2-2 7-7h-5z" fill="{accent}"/>
-</g>
-<text x="62" y="34" font-family="Consolas,'Liberation Mono',monospace" font-size="13.5" font-weight="700" fill="#eef1f8">{escape(title)}</text>
-<text x="62" y="54" font-family="'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#b4bed0">{escape(description)}</text>
+<rect x="1" y="2" width="{width - 2}" height="78" rx="12" fill="url(#bg)" stroke="#353047"/>
+<path d="M{width / 2 - 10} 2h20" stroke="{accent}" stroke-opacity=".65"/>
+<g transform="translate({width / 2 - 14} 10) scale(1.4)" style="--delay:{index * 4}s" shape-rendering="crispEdges">{scene}</g>
+<g font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#f5f1ff">{text}</g>
 </svg>
 '''
-    (OUT / f'{slug}.svg').write_text(svg, encoding='utf-8')
-    (OUT / 'static' / f'{slug}.svg').write_text(svg.replace(f'<style>{CSS}</style>', ''), encoding='utf-8')
+        (OUT / f'{slug}{variant}.svg').write_text(svg, encoding='utf-8')
+        (OUT / 'static' / f'{slug}{variant}.svg').write_text(svg.replace(f'<style>{CSS}</style>', ''), encoding='utf-8')
 
-PORTFOLIO = f'''<svg xmlns="http://www.w3.org/2000/svg" width="400" height="88" viewBox="0 0 400 88" role="img" aria-labelledby="title desc">
+PORTFOLIO = f'''<svg xmlns="http://www.w3.org/2000/svg" width="280" height="64" viewBox="0 0 280 64" role="img" aria-labelledby="title desc">
 <title id="title">Explore my portfolio</title><desc id="desc">Projects, demos and writing samples by Artem Skulimovskiy. Original pixel terminal; reduced-motion preferences disable animation.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171426"/><stop offset="1" stop-color="#0e1423"/></linearGradient></defs>
 <style>{CSS}</style>
+<rect x="1" y="2" width="278" height="58" rx="12" fill="url(#bg)" stroke="#71efd2" stroke-opacity=".5"/>
 <g shape-rendering="crispEdges">
-<path d="M9 4h382v4h4v4h4v60h-4v4h-4v4H9v-4H5v-4H1V12h4V8h4z" fill="#a7f3d0" stroke="#caffdf"/>
-<path d="M10 8h380v2H10M5 13h2v56H5" fill="#dbffed"/>
-<g transform="translate(17 22) scale(2)">
-<path d="M1 0h18v1h1v16H0V1h1zM8 16h4v3H8M5 19h10v1H5" fill="#123e2d"/>
+<g transform="translate(12 17) scale(1.4)">
+<path d="M1 0h18v1h1v16H0V1h1zM8 16h4v3H8M5 19h10v1H5" fill="#71efd2"/>
 <path d="M2 2h16v12H2z" fill="#0b1d18"/>
-<path d="M3 4h1v1h1v1H4v1H3V6h1V5H3z" fill="#a7f3d0"/>
-<g transform="translate(7 5)"><path class="move terminal-line" d="M0 0h8v1H0M0 3h6v1H0" fill="#a7f3d0"/></g>
-<path class="move terminal-cursor" d="M3 11h3v1H3" fill="#a7f3d0"/><path d="M16 15h2v1h-2" fill="#a7f3d0"/>
+<path d="M3 4h1v1h1v1H4v1H3V6h1V5H3z" fill="#71efd2"/>
+<g transform="translate(7 5)"><path class="move terminal-line" d="M0 0h8v1H0M0 3h6v1H0" fill="#71efd2"/></g>
+<path class="move terminal-cursor" d="M3 11h3v1H3" fill="#71efd2"/><path d="M16 15h2v1h-2" fill="#123e2d"/>
 </g>
-<path d="M354 27h29v29h-29z" fill="#123e2d" fill-opacity=".12"/>
-<path d="M361 40h12v-4h2v2h2v2h2v3h-2v2h-2v2h-2v-4h-12z" fill="#123e2d"/>
 </g>
-<g fill="#102e25"><text x="72" y="37" font-family="Consolas,'Liberation Mono',monospace" font-size="20" font-weight="700">Explore my portfolio</text>
-<text x="72" y="59" font-family="'Segoe UI',Arial,sans-serif" font-size="13.5">Projects, demos &amp; writing samples</text></g>
+<path d="M249 30h14m-5-5 5 5-5 5" fill="none" stroke="#71efd2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g font-family="'Segoe UI',Arial,sans-serif"><text x="51" y="28" font-size="16" font-weight="600" fill="#f5f1ff">Explore my portfolio</text>
+<text x="51" y="46" font-size="11" fill="#b6aecb">Projects, demos &amp; writing samples</text></g>
 </svg>
 '''
 (OUT / 'portfolio.svg').write_text(PORTFOLIO, encoding='utf-8')
