@@ -27,3 +27,7 @@ The current `assets/links/v2/` buttons use original pixel artwork from `scripts/
 Each v2 button includes a matching static variant selected by the README’s `<picture>` media query for reduced-motion preferences.
 
 The current `assets/links/v3/` reuses the original pixel scenes in compact, rounded panels matching the profile header. The portfolio button shares the dark palette and typeface. Web-app tiles include narrow variants and corresponding still images for reduced motion. All versions are built by `scripts/generate_pixel_buttons.py`; older published assets remain available for cached pages.
+
+## 8 October 2026 refresh
+
+`assets/projects/haltere-brain11-round6-20260929.jpg` is the unaltered frame at 15 seconds from [Haltere’s fast-brain-11 round-6 Minus Two recording](https://github.com/skulitom/haltere/releases/download/fast-brain-11-experimental/fast-brain11-minus-two-hairpin-pass-round6.mp4), published 29 September 2026. It shows connectome activity beside assisted gameplay. This development run later crashed and is not a completed race. Haltere’s MIT notice is retained.

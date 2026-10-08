@@ -11,7 +11,7 @@ I'm a **backend and infrastructure engineer at SimCorp**, based in London. I des
 
 Previously: **Eigen Technologies · JPMorgan · founder of an education startup.** MEng Computer Science, **UCL**, specialising in AI.
 
-**[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, an AI system that plans, writes, and checks long-form fiction. My other projects help agents use computers and explore learned control systems. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
+**[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, a Python tool for writing LitRPG serials with a coding agent. My other projects span agent tools, learned control, graphics, and game engines. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
 
 [All repositories](https://github.com/skulitom?tab=repositories) · [Connect on LinkedIn](https://www.linkedin.com/in/artem-skulimovskiy-7bb028118/)
 
@@ -22,8 +22,8 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/v2/litharness-mobile.svg"><img src="assets/v2/litharness.svg" width="100%" alt="LitHarness — LLM agent orchestration for serial fiction. Planning, persistent state, and revision. View the repository."></picture></a>
 <h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a> · Main project</h3>
-<p>Turns a story idea into a world, chapter plans, and a growing manuscript. Tracks continuity and saves every accepted revision. The generation pipeline works; literary-quality evaluation remains an open research problem.</p>
-<p><strong>Python · Agent orchestration · Persistent state</strong><br><a href="https://skulitom.github.io/litharness.html">Walkthrough &amp; writing sample →</a></p>
+<p>Turns a brief into a story bible, then plans and drafts LitRPG chapters with Codex or Claude Code. Checks character stats in code, recalls earlier passages, and keeps plain-file records so interrupted runs can resume. Literary-quality evaluation remains an open research problem.</p>
+<p><strong>Python · Coding agents · Local retrieval</strong><br><a href="https://skulitom.github.io/litharness.html">Current workflow &amp; archived sample →</a></p>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/Anode"><img src="assets/projects/anode.svg" width="100%" alt="Anode architecture: separate input sessions for you and an agent on the same Windows machine."></a>
@@ -34,9 +34,9 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-figure8-20260920.png" width="100%" alt="Haltere in Liftoff: a scripted figure-eight with yaw assistance, beside live neural activity, recorded on 20 September 2026."></a>
+<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-brain11-round6-20260929.jpg" width="100%" alt="Haltere in Liftoff: the experimental fast-brain-11 controller passing the Minus Two hairpin with pilot assistance, beside live neural activity, from the 29 September 2026 release."></a>
 <h3><a href="https://github.com/skulitom/haltere">Haltere</a></h3>
-<p>A 30,000-neuron connectome-constrained network for drone control in Liftoff. As of 22 September 2026, an experimental controller with visual race-cue assistance has completed three-lap races on two seen courses. Unseen-course completion remains unproven.</p>
+<p>A 30,000-neuron connectome-constrained network for drone control in Liftoff. Published September results include a 5:17.805 three-lap Straw Bale finish with fast-brain-08 and pilot assistance. The newer fast-brain-11 improves obstacle handling but has no completed race; unseen-course flight remains unproven.</p>
 <p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a> · <a href="https://github.com/skulitom/haltere#current-status">Current results</a></p>
 </td>
 <td width="50%" valign="top">
@@ -50,7 +50,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/primordia"><img src="assets/projects/primordia.webp" width="100%" alt="Actual Primordia simulation output: Physarum, Particle Life, Lenia, and reaction–diffusion."></a>
 <h3><a href="https://github.com/skulitom/primordia">Primordia</a></h3>
-<p>An interactive GPU artificial-life laboratory: five worlds, 42 presets, saved discoveries, live measurements, and headless image and video export. The new Symbiosis world couples agents and chemistry.</p>
+<p>An interactive GPU artificial-life laboratory: five worlds, 42 presets, saved discoveries, live measurements, and headless image and video export. Symbiosis couples agents and chemistry; a novelty search helps discover new patterns.</p>
 <p><strong>Rust · wgpu · WGSL</strong><br><a href="https://skulitom.github.io/#primordia">Watch the simulations →</a></p>
 </td>
 <td width="50%" valign="top">
@@ -61,6 +61,14 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 </td>
 </tr>
 </table>
+
+## More projects
+
+| Project | What it does |
+| --- | --- |
+| [PixelForge](https://github.com/skulitom/PixelForge) | Turn JSON recipes into pixel art, sprite sheets, and animations. Includes a local studio, CLI, and MCP server; no runtime dependencies. |
+| [Looking Glass](https://skulitom.github.io/LookingGlass/) | An unofficial *American McGee’s Alice* re-remaster in Rust. Experimental Windows preview with all 39 campaign visits; requires compatible game data supplied separately. |
+| [Cutbolt](https://github.com/skulitom/Cutbolt) | A local Rust video editing engine for agents, with saved edit sessions, exact timelines, undo, rendering, and MCP controls. |
 
 ## Interactive web apps
 
