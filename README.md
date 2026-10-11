@@ -40,24 +40,10 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a> · <a href="https://github.com/skulitom/haltere#current-status">Current results</a></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/AgentUI"><picture><source media="(max-width: 600px)" srcset="assets/v2/agentui-mobile.svg"><img src="assets/v2/agentui.svg" width="100%" alt="AgentUI — an MCP server providing interactive controls for coding agents, including forms, sliders, diffs, and live previews. View the repository."></picture></a>
-<h3><a href="https://github.com/skulitom/AgentUI">AgentUI</a></h3>
-<p>Guide a coding agent with forms, sliders, diffs, and live previews. The agent keeps working while you adjust the controls, then collects your decisions through MCP.</p>
-<p><strong>TypeScript · React · MCP · WebSockets</strong></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
 <a href="https://github.com/skulitom/primordia"><img src="assets/projects/primordia.webp" width="100%" alt="Actual Primordia simulation output: Physarum, Particle Life, Lenia, and reaction–diffusion."></a>
 <h3><a href="https://github.com/skulitom/primordia">Primordia</a></h3>
 <p>An interactive GPU artificial-life laboratory: five worlds, 42 presets, saved discoveries, live measurements, and headless image and video export. Symbiosis couples agents and chemistry; a novelty search helps discover new patterns.</p>
 <p><strong>Rust · wgpu · WGSL</strong><br><a href="https://skulitom.github.io/#primordia">Watch the simulations →</a></p>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/skulitom/CathodeDisplay"><picture><source media="(max-width: 600px)" srcset="assets/v2/cathode-mobile.svg"><img src="assets/v2/cathode.svg" width="100%" alt="Cathode — a retro CRT virtual monitor for real Windows apps. Phosphor pixels, scanlines, and glow. Explore the repository."></picture></a>
-<h3><a href="https://github.com/skulitom/CathodeDisplay">Cathode</a></h3>
-<p>A CRT virtual monitor for real Windows applications, with GPU phosphor rendering, scanlines, and glow. Available as a self-contained Windows download.</p>
-<p><strong>C# · WPF · GPU shaders</strong><br><a href="https://github.com/skulitom/CathodeDisplay/releases/latest">Download →</a></p>
 </td>
 </tr>
 </table>
