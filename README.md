@@ -21,7 +21,7 @@ Previously: **Eigen Technologies · JPMorgan · founder of an education startup.
 <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/v2/litharness-mobile.svg"><img src="assets/v2/litharness.svg" width="100%" alt="LitHarness — LLM agent orchestration for serial fiction. Planning, persistent state, and revision. View the repository."></picture></a>
-<h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a> · Main project</h3>
+<h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a></h3>
 <p>Turns a brief into a story bible, then plans and drafts LitRPG chapters with Codex or Claude Code. Checks character stats in code, recalls earlier passages, and keeps plain-file records so interrupted runs can resume. Literary-quality evaluation remains an open research problem.</p>
 <p><strong>Python · Coding agents · Local retrieval</strong><br><a href="https://skulitom.github.io/litharness.html">Current workflow &amp; archived sample →</a></p>
 </td>
