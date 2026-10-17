@@ -1,0 +1,9 @@
+{
+  "out": "cutbolt.svg", "kind": "card", "width": 192, "height": 100, "scale": 2, "radius": 8,
+  "title": "Darkroom flipbook",
+  "desc": "Pixel art made with Pixelbolt: a strip of film is pulled up out of a pink developing bath, round a brass sprocket drum and through a playhead gate, playing a bouncing-ball flipbook while drops fall off it back into the tray.",
+  "layers": [
+    {"sheet": "cutbolt/cutbolt.png", "atlas": "cutbolt/cutbolt.atlas.json", "animation": "cutbolt",
+     "recipe": "recipes/cutbolt.json", "x": 0, "y": 0, "still": 0}
+  ]
+}

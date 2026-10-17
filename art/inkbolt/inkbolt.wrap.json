@@ -1,0 +1,9 @@
+{
+  "out": "inkbolt.svg", "kind": "card", "width": 192, "height": 100, "scale": 2, "radius": 8,
+  "title": "Inkbolt",
+  "desc": "Pixel art made with Pixelbolt: a drop of ink falls from a dip pen into a glass tank of water and blooms into a vortex ring, and a vector curve with anchor points and handles traces its swirl.",
+  "layers": [
+    {"sheet": "inkbolt/inkbolt.png", "atlas": "inkbolt/inkbolt.atlas.json", "animation": "ink", "x": 0, "y": 0,
+     "still": 31, "recipe": "recipes/inkbolt.json"}
+  ]
+}

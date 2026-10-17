@@ -1,0 +1,22 @@
+{
+ "out": "chinese-touch-typing-still.svg",
+ "kind": "tile",
+ "width": 68,
+ "height": 42,
+ "scale": 2,
+ "radius": 6,
+ "title": "Chinese Touch Typing",
+ "desc": "Pixel art made with Pixelbolt: a three-key macropad with brass keycaps lettered N, I and 3, the pinyin input for \u4f60; the keys are typed in turn and the third-tone mark drops onto the I with a glint.",
+ "static": true,
+ "layers": [
+  {
+   "sheet": "chinese-touch-typing/chinese-touch-typing.png",
+   "atlas": "chinese-touch-typing/chinese-touch-typing.atlas.json",
+   "animation": "chinese-touch-typing",
+   "recipe": "recipes/chinese-touch-typing.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}

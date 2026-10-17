@@ -1,0 +1,22 @@
+{
+ "out": "portfolio-still.svg",
+ "kind": "portfolio",
+ "width": 140,
+ "height": 32,
+ "scale": 2,
+ "radius": 6,
+ "title": "Explore my portfolio",
+ "desc": "Pixel art made with Pixelbolt: a little terminal on a ledge of the workbench, its mint screen lighting the wood; its cursor types a command and the screen lists four projects.",
+ "static": true,
+ "layers": [
+  {
+   "sheet": "portfolio/portfolio.png",
+   "atlas": "portfolio/portfolio.atlas.json",
+   "animation": "portfolio",
+   "recipe": "recipes/portfolio.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}

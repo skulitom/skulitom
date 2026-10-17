@@ -1,0 +1,21 @@
+{
+ "out": "anode.svg",
+ "kind": "card",
+ "width": 192,
+ "height": 100,
+ "scale": 2,
+ "radius": 8,
+ "title": "Anode",
+ "desc": "Pixel art made with Pixelbolt: your desk and monitor in front, a calm editor on the screen; through an arched doorway, a second desk in drifting pale mist, where an agent's mint cursor works on its own and the mist parts and curls in its wake.",
+ "layers": [
+  {
+   "sheet": "anode/anode.png",
+   "atlas": "anode/anode.atlas.json",
+   "animation": "loop",
+   "x": 0,
+   "y": 0,
+   "still": 58,
+   "recipe": "recipes/anode.json"
+  }
+ ]
+}

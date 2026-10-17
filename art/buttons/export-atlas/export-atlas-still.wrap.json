@@ -1,0 +1,22 @@
+{
+ "out": "export-atlas-still.svg",
+ "kind": "tile",
+ "width": 68,
+ "height": 42,
+ "scale": 2,
+ "radius": 6,
+ "title": "Export Atlas",
+ "desc": "Pixel art made with Pixelbolt: a little container ship on a strip of night water; it powers on, its bow throws spray and a simulated wake of foam streams back behind it.",
+ "static": true,
+ "layers": [
+  {
+   "sheet": "export-atlas/export-atlas.png",
+   "atlas": "export-atlas/export-atlas.atlas.json",
+   "animation": "export-atlas",
+   "recipe": "recipes/export-atlas.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}

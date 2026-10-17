@@ -1,0 +1,3 @@
+# LF everywhere, whatever core.autocrlf says: bash refuses build scripts with CRLF line endings.
+* text=auto eol=lf
+*.png binary

@@ -1,0 +1,21 @@
+{
+ "out": "pixelbolt-card.svg",
+ "kind": "card",
+ "width": 192,
+ "height": 100,
+ "scale": 2,
+ "radius": 8,
+ "title": "Pixelbolt: the pixel forge",
+ "desc": "Pixel art made with Pixelbolt: a crucible pours molten metal into a star-shaped mould. The metal cools from white-hot to brass, the mould opens and the cast star pops out onto a rack.",
+ "layers": [
+  {
+   "sheet": "pixelbolt-card/pixelbolt-card.png",
+   "atlas": "pixelbolt-card/pixelbolt-card.atlas.json",
+   "animation": "loop",
+   "x": 0,
+   "y": 0,
+   "still": 33,
+   "recipe": "recipes/pixelbolt-card.json"
+  }
+ ]
+}
