@@ -1,0 +1,27 @@
+{
+ "kind": "hero-mobile",
+ "width": 156,
+ "height": 180,
+ "scale": 2,
+ "radius": 8,
+ "title": "Night workbench",
+ "desc": "Pixel art made with Pixelbolt: a mint liquid boils in a glass flask on a moonlit workbench and its steam rolls up in shaded billows.",
+ "layers": [
+  {
+   "image": "hero-mobile-bg/frames/bg.png",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "sheet": "hero-mobile-fx/hero-mobile-fx.png",
+   "atlas": "hero-mobile-fx/hero-mobile-fx.atlas.json",
+   "animation": "loop",
+   "x": 0,
+   "y": 58,
+   "still": 50,
+   "recipe": "recipes/hero-mobile-fx.json"
+  }
+ ],
+ "out": "hero-mobile-still.svg",
+ "static": true
+}

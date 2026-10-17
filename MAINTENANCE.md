@@ -7,8 +7,7 @@ The root README appears on [github.com/skulitom](https://github.com/skulitom) be
 - Lead with tools for agents. Anode is the featured project; LitHarness belongs under agent workflows.
 - Keep the large tool display to four cards: Anode, Inkbolt, Cutbolt, and Pixelbolt. Keep Nestbolt and AgentUI as compact links; research and other apps follow below.
 - Do not feature open-source contributions in the profile or portfolio; Artem prefers to leave them out.
-- Edit `scripts/generate_assets.py` and run `python scripts/generate_assets.py` to regenerate the illustrations.
-- Commit the generated `assets/v3/*.svg` alongside the script.
+- The header, tool cards and footer are Pixelbolt pixel art in `assets/v4/` (see below). Rebuild them from `art/` with `bash art/build.sh`, and commit the regenerated `assets/v4/*.svg` together with the sources.
 - Run `python scripts/generate_badges.py` to rebuild the toolkit badges in `assets/toolkit/v1/` from the local icon data.
 
 All graphics are SVG, stored in this repository. The header and project illustrations are original; the toolkit badges use Simple Icons 16.30.0 brand marks, with original terminal and database symbols for Codex and SQL. The icon source and CC0 license are included in `assets/toolkit/`.
@@ -36,3 +35,17 @@ LitHarness was rebuilt from 27 September: describe the current brief/bible/chapt
 Run `python scripts/generate_agent_assets.py` to regenerate the v3 header, footer, and agent-tool illustrations.
 
 Keep the six animated pixel-art live website links visible in the main README, outside collapsed details. Artem explicitly wants these retained as part of the profile aesthetic.
+
+## Pixelbolt pixel art (17 October 2026)
+
+Artem asked for the profile to show what his own tools can do. The header, the four tool cards and the footer are animated pixel art made entirely with Pixelbolt, with its liquid and gas simulations as the centrepiece. Keep it that way: new or replacement art for this profile is made with Pixelbolt, not drawn as hand-coded SVG.
+
+- **Rebuild:** `art/` holds every piece's sources (generators, `*.fluid.json`, recipes), the shared 70-colour `palette.json`, the SVG wrapper (`art/tools/wrap.py`) and the integration step that adds the vector labels and frames. `bash art/build.sh` rebuilds everything into `assets/v4/` and gives identical bytes on every run. It fetches Pixelbolt at the pinned commit when `PIXELBOLT` isn't set.
+- **Scale:** one art pixel is about 2 CSS pixels at GitHub's desktop width. The README column is 846 px at a 1440 px viewport, and a card cell is 395.5 px. The art sizes follow from that:
+  - cards: 192×100
+  - header: 416×162, as two 208 px halves, because Pixelbolt caps a frame at 256 px
+  - phone header: 156×180
+  - footer: 416×42
+- **Reduced motion:** browsers don't pass the reduced-motion setting into SVG images. Every animated image therefore has a `<picture>` source with `media="(prefers-reduced-motion: reduce)"` pointing at its `-still.svg`, and the header also has phone variants of both.
+- **Honesty:** the credit line under the tool cards says what was made with Pixelbolt. Keep it accurate when adding or replacing art.
+- **New version folder:** as before, when the art changes, use `assets/v5/` and update the README paths, so cached images are not reused.

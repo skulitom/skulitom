@@ -1,0 +1,9 @@
+{
+  "out": "nestbolt.svg", "kind": "card", "width": 192, "height": 100, "scale": 2, "radius": 8,
+  "title": "Laser at work",
+  "desc": "Pixel art made with Pixelbolt: a laser head cuts a nest of plywood parts while smoke curls into the extractor; the finished sheet shuttles out and a fresh one slides in.",
+  "layers": [
+    {"sheet": "nestbolt/nestbolt.png", "atlas": "nestbolt/nestbolt.atlas.json", "animation": "loop", "x": 0, "y": 0,
+     "still": 40, "recipe": "recipes/nestbolt.json"}
+  ]
+}

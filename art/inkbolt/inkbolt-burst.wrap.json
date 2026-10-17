@@ -1,0 +1,9 @@
+{
+  "out": "inkbolt-burst.svg", "kind": "card", "width": 192, "height": 100, "scale": 2, "radius": 8,
+  "title": "Inkbolt",
+  "desc": "Pixel art made with Pixelbolt: a dip pen drops ink twice into a glass tank of water, and the two vortex rings collide.",
+  "layers": [
+    {"sheet": "inkbolt-burst/inkbolt-burst.png", "atlas": "inkbolt-burst/inkbolt-burst.atlas.json", "animation": "burst",
+     "x": 0, "y": 0, "still": 30, "recipe": "recipes/inkbolt-burst.json"}
+  ]
+}

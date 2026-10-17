@@ -1,0 +1,76 @@
+PROFILE PIXEL ART: SOURCES AND REBUILD
+======================================
+
+This folder rebuilds the README's pixel art (../assets/v4/*.svg) from source. Every pixel is drawn by Pixelbolt
+(github.com/skulitom/Pixelbolt, pinned at 8c5f662) from recipes that small Python generators write.
+
+    bash art/build.sh                     # fetches Pixelbolt 8c5f662 into art/.pixelbolt (shallow), builds, integrates
+    PIXELBOLT=/path/to/Pixelbolt/bin/pixelbolt.js bash art/build.sh    # reuse a checkout you already have
+    PIXELBOLT=... bash art/anode/build.sh                              # one piece only (writes art/anode/out/)
+    python art/tools/integrate.py [hero anode ...]                     # SVGs only, from the pieces' out/
+
+Requirements: Node 20+, Python 3.11+ with Pillow, Git Bash on Windows (any bash elsewhere), git if PIXELBOLT is unset.
+Pixelbolt has no npm dependencies. A full build takes about 40 s.
+
+LAYOUT
+  build.sh            fetch/locate Pixelbolt, build every piece (PIECES list), run tools/integrate.py
+  palette.json        the shared master palette; every recipe and fluid source refers to it as ../../../palette.json
+  tools/env.sh        sourced by each piece's build.sh: ART, PIXELBOLT, PYTHON (python, then python3), pb()
+  tools/integrate.py  wrap specs + vector text, chips and frame -> ../assets/v4/<name>.svg and <name>-still.svg
+  tools/wrap.py       the wrapper (sheet + atlas -> self-contained animated SVG); unchanged copy of the kit's wrap.py
+  <piece>/build.sh    the piece's build; writes only to <piece>/out/
+  <piece>/src/*.py    the generators (the true sources: layout, timing, fluid sources, recipes)
+  <piece>/*.wrap.json the wrapper specs; layer paths are relative to <piece>/out/
+  <piece>/out/        generated, gitignored: fluids/ (fluid sources), build/ (compiled fluids, still.txt, layouts),
+                      recipes/, and one Pixelbolt render bundle per recipe (out/<name>/<name>.png, .atlas.json,
+                      frames/ ...)
+
+  piece      from artist folder   renders (out/)                                      wrap specs
+  hero       hero/                hero-{left,right}-{bg,fx}, hero-mobile-{bg,fx},     hero, hero-mobile, footer
+                                  footer-{left,right}-bg, footer-right-fx              (+ -still each)
+  anode      anode/               anode, anode-burst                                  anode, anode-still, anode-burst
+  inkbolt    inkbolt/             inkbolt, inkbolt-burst                              inkbolt, -still, -burst
+  cutbolt    cutbolt/             cutbolt                                             cutbolt, cutbolt-still
+  pixelbolt  pixelbolt-card/      pixelbolt-card (+ pixelbolt-card-still-1x.png)      pixelbolt-card, -static
+  nestbolt   nestbolt/            nestbolt, nestbolt-burst                            nestbolt, -still, -burst
+  The *-burst specs are the site's hover bursts; integrate.py doesn't use them.
+
+WHAT WAS CHANGED FROM THE ARTISTS' FOLDERS (2026-10-17)
+Only paths. Generated files moved under out/ (fluid sources from src/fluids or build/ to out/fluids or out/build,
+recipes to out/recipes, inkbolt's burst/ tree into out/), palette $refs repointed to art/palette.json, the hard-coded
+Pixelbolt path in the helper modules (anode kit.py, inkbolt pb.py, pixelbolt lib.py; unused by the builds) now reads
+$PIXELBOLT, and the wrap specs' informational "recipe" field now points at out/recipes/. Left out: concepts, lab/exp/
+spike experiments, review boards and zooms, GIFs, grayscale/diagnostic inspects, browser render tests, compiled
+recipes and fluid sources (all regenerated), and the scripts that only wrote wrap specs or review images (hero
+wraps.py/compose.py/board.py, anode wrap_spec.py/still.py, pixelbolt wrapspec.py, cutbolt board.py, inkbolt zoom.py).
+
+VERIFIED 2026-10-17 (Windows 11, Git Bash, Node 24.19.0, Python 3.13.9, Pillow 12.0.0, Pixelbolt 8c5f662)
+A copy of this folder built from scratch matched the artists' current outputs byte for byte: all 30 files the wrap
+specs reference (sheets, atlases, 6 single-frame images), the sheet and atlas of all 17 render bundles, and every
+other bundle file (971: frame PNGs, css, player, pixel.json). The 14 SVGs equal what the kit's integrate_profile.py
+makes from those outputs. 12 equal assets/v4 as it stood in this clone; anode.svg and anode-still.svg differ only because
+the assets/v4 copies were written at 20:10, before the Anode artist's final rebuild (20:24): re-run the build to
+refresh them. Without the Windows fonts integrate.py falls back to the recorded MEASURED widths: same 14 SVGs, and
+the two text-fit checks report as skipped.
+
+THINGS TO KNOW
+- The still frames live in the wrap specs ("still"), and the generators also pick a still (out/build/still.txt,
+  pixelbolt design.STILL). If a piece's still changes, update its wrap specs to match.
+- Nestbolt builds, but tools/integrate.py has no row for it yet (it isn't in the README): add one with its eyebrow.
+- The Cutbolt and Pixelbolt hover bursts have no wrap specs, so they aren't built. Their generators still support
+  them: cutbolt `gen.py --burst` after compiling out/fluids/tray-burst.fluid.json; pixelbolt `CARD_VARIANT=burst`
+  for fluids.py and gen.py, compiling *-burst.fluid.json into out/build/burst/ (see the artists' build.sh).
+- Chip widths: a new chip label or headline needs its Pillow width added to MEASURED in integrate.py (run it once on
+  Windows; it prints the entry) or Linux/CI builds stop with a message.
+- Byte-identity was checked with the Python above. The generators use Python's math module, so a different platform's
+  libm could in principle move a pixel; Pixelbolt's own output is deterministic.
+- Run the scripts with bash (they are not marked executable). .gitattributes keeps every file LF, since core.autocrlf
+  is on here and bash rejects CRLF scripts.
+
+ADDING A PIECE (the button set, from scratch/profile-art/buttons/)
+1. art/buttons/src/ with the generators; point their output paths at out/fluids, out/build, out/recipes and their
+   palette $refs at ../../../palette.json.
+2. art/buttons/build.sh: `cd "$(dirname "$0")"; . ../tools/env.sh`, then rm -rf out, mkdir, `pb compile`/`pb render`
+   into out/ (copy any of the piece scripts here as a template).
+3. The button wrap specs in art/buttons/, layer paths relative to art/buttons/out/.
+4. Add "buttons" to PIECES in build.sh and its rows (and overlays, if any) to PIECES in tools/integrate.py.

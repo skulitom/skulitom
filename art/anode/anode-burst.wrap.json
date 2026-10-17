@@ -1,0 +1,21 @@
+{
+ "out": "anode-burst.svg",
+ "kind": "card",
+ "width": 192,
+ "height": 100,
+ "scale": 2,
+ "radius": 8,
+ "title": "Anode",
+ "desc": "Pixel art made with Pixelbolt: your desk and monitor in front, a calm editor on the screen; through an arched doorway, a second desk in drifting pale mist, where an agent's mint cursor works on its own and the mist parts and curls in its wake. On hover the cursor zips a figure-eight and the mist bursts into curls.",
+ "layers": [
+  {
+   "sheet": "anode-burst/anode-burst.png",
+   "atlas": "anode-burst/anode-burst.atlas.json",
+   "animation": "burst",
+   "x": 0,
+   "y": 0,
+   "still": 40,
+   "recipe": "recipes/anode-burst.json"
+  }
+ ]
+}

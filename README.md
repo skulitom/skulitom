@@ -43,6 +43,17 @@ My background is in **backend infrastructure and distributed systems at SimCorp*
 
 <sub>The header, tool cards and footer art were made with <a href="https://github.com/skulitom/Pixelbolt">Pixelbolt</a>: the liquids, mist and steam are real fluid simulations, shaded and animated as pixel art.</sub>
 
+<details>
+<summary>How this art was made</summary>
+
+AI agents made the header, tool cards and footer with Pixelbolt, the pixel-art tool for agents. Small Python generators write the JSON recipes and fluid sources; Pixelbolt runs the simulations and draws every pixel; a short wrapper packs the sprite sheets into self-contained animated SVGs. The sources are in [`art/`](art/), and one command rebuilds everything to the same bytes:
+
+```bash
+bash art/build.sh
+```
+
+</details>
+
 **[Nestbolt](https://github.com/skulitom/Nestbolt)** — sheet nesting for laser, CNC, and fabric cutting, with browser, CLI, and MCP interfaces.
 
 **[AgentUI](https://github.com/skulitom/AgentUI)** — forms, sliders, diffs, and live previews for decisions between people and coding agents.

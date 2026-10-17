@@ -1,0 +1,32 @@
+{
+ "kind": "footer",
+ "width": 416,
+ "height": 42,
+ "scale": 2,
+ "radius": 8,
+ "title": "Workbench edge",
+ "desc": "Pixel art made with Pixelbolt: the edge of a moonlit workbench, a slow ribbon of steam and one drip.",
+ "layers": [
+  {
+   "image": "footer-left-bg/frames/bg.png",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "image": "footer-right-bg/frames/bg.png",
+   "x": 208,
+   "y": 0
+  },
+  {
+   "sheet": "footer-right-fx/footer-right-fx.png",
+   "atlas": "footer-right-fx/footer-right-fx.atlas.json",
+   "animation": "loop",
+   "x": 326,
+   "y": 0,
+   "still": 24,
+   "recipe": "recipes/footer-right-fx.json"
+  }
+ ],
+ "out": "footer-still.svg",
+ "static": true
+}

@@ -1,0 +1,9 @@
+{
+  "out": "nestbolt-burst.svg", "kind": "card", "width": 192, "height": 100, "scale": 2, "radius": 8,
+  "title": "Laser at work (hover)",
+  "desc": "Pixel art made with Pixelbolt: the laser head races through a nest of plywood parts in a shower of sparks and a big curl of smoke.",
+  "layers": [
+    {"sheet": "nestbolt-burst/nestbolt-burst.png", "atlas": "nestbolt-burst/nestbolt-burst.atlas.json",
+     "animation": "loop", "x": 0, "y": 0, "still": 18, "recipe": "recipes/nestbolt-burst.json"}
+  ]
+}
