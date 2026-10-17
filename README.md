@@ -1,62 +1,66 @@
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/v2/hello-mobile.svg">
-  <img src="assets/v2/hello.svg" width="100%" alt="Artem Skulimovskiy — software engineer in London. Backend infrastructure, distributed systems, and applied AI.">
+  <source media="(max-width: 600px)" srcset="assets/v3/hello-mobile.svg">
+  <img src="assets/v3/hello.svg" width="100%" alt="Artem Skulimovskiy — agentic engineer in London. Building tools for AI agents.">
 </picture>
 
 <p>
 <a href="https://skulitom.github.io/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v3/static/portfolio.svg"><img src="assets/links/v3/portfolio.svg" width="280" alt="Explore my portfolio — projects, demos and writing samples"></picture></a>
 </p>
 
-I'm a **backend and infrastructure engineer at SimCorp**, based in London. I design and operate distributed calculation infrastructure, from worker coordination and batch scheduling to the data layer and failure investigation.
+I'm an **agentic engineer**, based in London. I build tools that let AI agents work with desktop apps, graphics, video, and creative workflows—with results people can inspect and revise.
 
-Previously: **Eigen Technologies · JPMorgan · founder of an education startup.** MEng Computer Science, **UCL**, specialising in AI.
-
-**[LitHarness](https://github.com/skulitom/LitHarness) is my main independent project**, a Python tool for writing LitRPG serials with a coding agent. My other projects span agent tools, learned control, graphics, and game engines. I use coding agents throughout development, set the architecture and constraints, and review and verify their work.
+My background is in **backend infrastructure and distributed systems at SimCorp**, previously **Eigen Technologies and JPMorgan**. MEng Computer Science, **UCL**, specialising in AI.
 
 [All repositories](https://github.com/skulitom?tab=repositories) · [Connect on LinkedIn](https://www.linkedin.com/in/artem-skulimovskiy-7bb028118/)
 
-## Selected projects
+## Tools for agents
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/LitHarness"><picture><source media="(max-width: 600px)" srcset="assets/v2/litharness-mobile.svg"><img src="assets/v2/litharness.svg" width="100%" alt="LitHarness — LLM agent orchestration for serial fiction. Planning, persistent state, and revision. View the repository."></picture></a>
-<h3><a href="https://github.com/skulitom/LitHarness">LitHarness</a></h3>
-<p>Turns a brief into a story bible, then plans and drafts LitRPG chapters with Codex or Claude Code. Checks character stats in code, recalls earlier passages, and keeps plain-file records so interrupted runs can resume. Literary-quality evaluation remains an open research problem.</p>
-<p><strong>Python · Coding agents · Local retrieval</strong><br><a href="https://skulitom.github.io/litharness.html">Current workflow &amp; archived sample →</a></p>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/skulitom/Anode"><img src="assets/projects/anode.svg" width="100%" alt="Anode architecture: separate input sessions for you and an agent on the same Windows machine."></a>
+<a href="https://github.com/skulitom/Anode"><img src="assets/projects/anode.svg" width="100%" alt="Anode: separate input sessions for you and an AI agent on one Windows machine."></a>
 <h3><a href="https://github.com/skulitom/Anode">Anode</a></h3>
-<p>Gives an AI agent its own Windows desktop while you keep using your PC. Includes separate input focus, automation controls, and a virtual gamepad. Runs as the same user with access to the same files.</p>
-<p><strong>C# · .NET · Windows APIs · MCP</strong></p>
+<p>Give an agent its own background Windows desktop to use and test apps while you keep working. Screenshots, accessibility controls, and separate mouse and keyboard focus. Runs as your user with access to your files.</p>
+<p><strong>C# · Windows APIs · MCP</strong></p>
+</td><td width="50%" valign="top">
+<a href="https://github.com/skulitom/Inkbolt"><img src="assets/v3/inkbolt.svg" width="100%" alt="Inkbolt — graphics for agents."></a>
+<h3><a href="https://github.com/skulitom/Inkbolt">Inkbolt</a></h3>
+<p>Local vector and raster editing for diagrams, illustrations, and image assets. Agents preview and revise artwork, keep editable sources, and export the result.</p>
+<p><strong>Rust · MCP · JSON CLI</strong></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/haltere"><img src="assets/projects/haltere-brain11-round6-20260929.jpg" width="100%" alt="Haltere in Liftoff: the experimental fast-brain-11 controller passing the Minus Two hairpin with pilot assistance, beside live neural activity, from the 29 September 2026 release."></a>
-<h3><a href="https://github.com/skulitom/haltere">Haltere</a></h3>
-<p>A 30,000-neuron connectome-constrained network for drone control in Liftoff. Published September results include a 5:17.805 three-lap Straw Bale finish with fast-brain-08 and pilot assistance. The newer fast-brain-11 improves obstacle handling but has no completed race; unseen-course flight remains unproven.</p>
-<p><strong>PyTorch · Differentiable simulation · 30,000 neurons</strong><br><a href="https://skulitom.github.io/#haltere">Watch the Liftoff flight →</a> · <a href="https://github.com/skulitom/haltere#current-status">Current results</a></p>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/skulitom/primordia"><img src="assets/projects/primordia.webp" width="100%" alt="Actual Primordia simulation output: Physarum, Particle Life, Lenia, and reaction–diffusion."></a>
-<h3><a href="https://github.com/skulitom/primordia">Primordia</a></h3>
-<p>An interactive GPU artificial-life laboratory: five worlds, 42 presets, saved discoveries, live measurements, and headless image and video export. Symbiosis couples agents and chemistry; a novelty search helps discover new patterns.</p>
-<p><strong>Rust · wgpu · WGSL</strong><br><a href="https://skulitom.github.io/#primordia">Watch the simulations →</a></p>
+<a href="https://github.com/skulitom/Cutbolt"><img src="assets/v3/cutbolt.svg" width="100%" alt="Cutbolt — video for agents."></a>
+<h3><a href="https://github.com/skulitom/Cutbolt">Cutbolt</a></h3>
+<p>A local video editing engine for agents. Arrange footage, add captions and graphics, mix sound, and export—with saved revisions and undo.</p>
+<p><strong>Rust · FFmpeg · MCP</strong></p>
+</td><td width="50%" valign="top">
+<a href="https://github.com/skulitom/Pixelbolt"><img src="assets/v3/pixelbolt.svg" width="100%" alt="Pixelbolt — pixel art for agents."></a>
+<h3><a href="https://github.com/skulitom/Pixelbolt">Pixelbolt</a></h3>
+<p>Pixel art and animation from editable JSON recipes. Agents make, preview, and revise sprites and atlases; people can edit the same recipe in a local studio.</p>
+<p><strong>JavaScript · MCP · Local studio</strong></p>
 </td>
 </tr>
 </table>
 
-## More projects
+**[Nestbolt](https://github.com/skulitom/Nestbolt)** — sheet nesting for laser, CNC, and fabric cutting, with browser, CLI, and MCP interfaces.
 
-| Project | What it does |
+**[AgentUI](https://github.com/skulitom/AgentUI)** — forms, sliders, diffs, and live previews for decisions between people and coding agents.
+
+## Agent workflows & experiments
+
+| Project | What it explores |
 | --- | --- |
-| [PixelForge](https://github.com/skulitom/PixelForge) | Turn JSON recipes into pixel art, sprite sheets, and animations. Includes a local studio, CLI, and MCP server; no runtime dependencies. |
-| [Looking Glass](https://skulitom.github.io/LookingGlass/) | An unofficial *American McGee’s Alice* re-remaster in Rust. Experimental Windows preview with all 39 campaign visits; requires compatible game data supplied separately. |
-| [Cutbolt](https://github.com/skulitom/Cutbolt) | A local Rust video editing engine for agents, with saved edit sessions, exact timelines, undo, rendering, and MCP controls. |
+| [LitHarness](https://github.com/skulitom/LitHarness) | Write LitRPG serials with Codex or Claude Code, with story state, deterministic checks, local retrieval, and resumable runs. [Workflow & archived sample](https://skulitom.github.io/litharness.html). |
+| [Haltere](https://github.com/skulitom/haltere) | A fruit-fly connectome trained for drone control in Liftoff. Experimental controllers, assisted flight, and [published results](https://github.com/skulitom/haltere#current-status). |
+| [Primordia](https://github.com/skulitom/primordia) | A GPU artificial-life laboratory with five worlds, 42 presets, saved discoveries, and headless exports. |
+| [Looking Glass](https://skulitom.github.io/LookingGlass/) | An experimental Rust re-remaster of *American McGee’s Alice*; requires compatible game data. |
 
-## Interactive web apps
+<details>
+<summary>Web apps & earlier experiments</summary>
+
+### Interactive web apps
 
 Explore maps, practise Chinese, and back up your song lists.
 
@@ -76,7 +80,12 @@ Explore maps, practise Chinese, and back up your song lists.
 
 </details>
 
-## Android apps
+</details>
+
+<details>
+<summary>Android apps</summary>
+
+### Android apps
 
 I also publish educational quiz apps on Google Play, covering language and history.
 
@@ -88,7 +97,13 @@ I also publish educational quiz apps on Google Play, covering language and histo
 
 [View my Google Play developer page →](https://play.google.com/store/apps/developer?id=Skulitom)
 
-## Technical toolkit
+</details>
+
+## Background & toolkit
+
+I use Codex and Claude Code throughout development: I set the architecture and constraints, review changes, and verify results. My systems work spans worker coordination, batch scheduling, data layers, and failure investigation.
+
+### Technical toolkit
 
 <p align="center"><strong>AI &amp; agent tooling</strong></p>
 <p align="center">
@@ -116,4 +131,4 @@ I also publish educational quiz apps on Google Play, covering language and histo
 
 <br>
 
-<img src="assets/v2/footer.svg" width="100%" alt="Artem Skulimovskiy — backend engineering, distributed systems, and AI.">
+<img src="assets/v3/footer.svg" width="100%" alt="Artem Skulimovskiy — agent tools, creative workflows, and systems.">

@@ -31,3 +31,7 @@ The current `assets/links/v3/` reuses the original pixel scenes in compact, roun
 ## 8 October 2026 refresh
 
 `assets/projects/haltere-brain11-round6-20260929.jpg` is the unaltered frame at 15 seconds from [Haltere’s fast-brain-11 round-6 Minus Two recording](https://github.com/skulitom/haltere/releases/download/fast-brain-11-experimental/fast-brain11-minus-two-hairpin-pass-round6.mp4), published 29 September 2026. It shows connectome activity beside assisted gameplay. This development run later crashed and is not a completed race. Haltere’s MIT notice is retained.
+
+## 17 October 2026 agentic engineering refresh
+
+The updated header and footer and the Inkbolt, Cutbolt, Pixelbolt, and Nestbolt illustrations are original SVG artwork in the existing palette. They depict capabilities, not application screenshots. Their animations respect reduced-motion preferences. Source: the profile repository’s `scripts/generate_assets.py` and `scripts/generate_agent_assets.py`.

@@ -4,11 +4,11 @@ The root README appears on [github.com/skulitom](https://github.com/skulitom) be
 
 - Edit `README.md` to change the introduction, project links, or toolkit.
 - Keep the animated illustrations and grouped custom skill pills when refreshing profile content; Artem explicitly prefers this visual style.
-- Keep LitHarness first as the main project, and use the latest Liftoff recording for Haltere's preview.
-- Keep the large selected-project display to four cards in two columns: LitHarness, Anode, Haltere, and Primordia. Artem asked on 11 October 2026 to remove AgentUI and Cathode from this display because they are lower priority and add clutter.
+- Lead with tools for agents. Anode is the featured project; LitHarness belongs under agent workflows.
+- Keep the large tool display to four cards: Anode, Inkbolt, Cutbolt, and Pixelbolt. Keep Nestbolt and AgentUI as compact links; research and other apps follow below.
 - Do not feature open-source contributions in the profile or portfolio; Artem prefers to leave them out.
 - Edit `scripts/generate_assets.py` and run `python scripts/generate_assets.py` to regenerate the illustrations.
-- Commit the generated `assets/v2/*.svg` alongside the script.
+- Commit the generated `assets/v3/*.svg` alongside the script.
 - Run `python scripts/generate_badges.py` to rebuild the toolkit badges in `assets/toolkit/v1/` from the local icon data.
 
 All graphics are SVG, stored in this repository. The header and project illustrations are original; the toolkit badges use Simple Icons 16.30.0 brand marks, with original terminal and database symbols for Codex and SQL. The icon source and CC0 license are included in `assets/toolkit/`.
@@ -32,3 +32,5 @@ Use the header’s dark violet/navy panels, rounded frames, and Segoe UI labels 
 ## 8 October 2026 content review
 
 LitHarness was rebuilt from 27 September: describe the current brief/bible/chapter workflow from its README, not the archived multi-agent implementation. The portfolio writing sample is explicitly historical. PixelForge, Looking Glass, and Cutbolt are linked as additional projects; preserve their prototype and game-data qualifications. Haltere’s displayed clip is the 29 September fast-brain-11 round-6 development flight, not a completed race; fast-brain-08 retains the published 5:17.805 race result. Verify both the latest release notes and the README, which can be updated at different times.
+
+Run `python scripts/generate_agent_assets.py` to regenerate the v3 header, footer, and agent-tool illustrations.

@@ -4,7 +4,7 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSETS = ROOT / "assets" / "v2"
+ASSETS = ROOT / "assets" / "v3"
 ASSETS.mkdir(parents=True, exist_ok=True)
 
 INK = "#f5f1ff"
@@ -75,7 +75,7 @@ def systems_diagram(x, y, scale=1):
         for offset in [-8,0,8]:
             parts.append(f'<path d="M{nx-14} {ny+offset} H{nx+14}" stroke="{color}" stroke-width="2" stroke-linecap="round" opacity=".8"/>')
     parts += [f'<rect x="-58" y="-48" width="116" height="96" rx="17" fill="#1c2135" stroke="{VIOLET}" stroke-width="1.5"/>', text(0,10,"{ }",38,MINT,500,'class="mono" text-anchor="middle"')]
-    parts += [text(0,147,"DISTRIBUTED SYSTEMS",11,MUTED,500,'class="mono" text-anchor="middle" letter-spacing="2"'), '</g>']
+    parts += [text(0,147,"TOOLS FOR AGENTS",11,MUTED,500,'class="mono" text-anchor="middle" letter-spacing="2"'), '</g>']
     return ''.join(parts)
 
 
@@ -86,26 +86,26 @@ def pill(x,y,w,label,color):
 
 body = panel(1000,390)
 body += '<path d="M32 1 H968" stroke="url(#rainbow)" stroke-width="2"/>'
-body += text(48,50,"SKULITOM  /  SOFTWARE ENGINEER",13,MINT,600,'class="mono" letter-spacing="1.8"')
+body += text(48,50,"SKULITOM  /  AGENTIC ENGINEER",13,MINT,600,'class="mono" letter-spacing="1.8"')
 body += text(48,140,"Artem Skulimovskiy",48,INK,700)
-body += text(50,192,"Backend & infrastructure.",27,MUTED,400)
-body += text(50,228,"Distributed systems & AI.",27,MUTED,400)
-body += pill(48,266,133,"Python",MINT)+pill(190,266,101,"AI agents",VIOLET)+pill(300,266,149,"Data engineering",PINK)
-body += text(50,348,"SOFTWARE ENGINEER",12,MUTED,500,'class="mono" letter-spacing="1.6"')
+body += text(50,192,"Building tools for agents.",27,MUTED,400)
+body += text(50,228,"Desktop, graphics & video.",27,MUTED,400)
+body += pill(48,266,133,"Python",MINT)+pill(190,266,101,"AI agents",VIOLET)+pill(300,266,149,"MCP tools",PINK)
+body += text(50,348,"AGENTIC ENGINEER",12,MUTED,500,'class="mono" letter-spacing="1.6"')
 body += '<circle cx="227" cy="344" r="2" fill="#6b627f"/>'
 body += text(243,348,"LONDON, UK",12,MUTED,500,'class="mono" letter-spacing="1.6"')
 body += systems_diagram(770,193)
-svg("hello.svg",1000,390,body,"Artem Skulimovskiy — backend, infrastructure, and AI")
+svg("hello.svg",1000,390,body,"Artem Skulimovskiy — agentic engineering and tools for agents")
 
 body = panel(520,600)+'<path d="M32 1 H488" stroke="url(#rainbow)" stroke-width="2"/>'
-body += text(30,44,"SKULITOM / SOFTWARE ENGINEER",12,MINT,600,'class="mono" letter-spacing="1"')
+body += text(30,44,"SKULITOM / AGENTIC ENGINEER",12,MINT,600,'class="mono" letter-spacing="1"')
 body += text(28,105,"Artem Skulimovskiy",38,INK,700)
-body += text(30,149,"Backend & infrastructure.",23,MUTED)
-body += text(30,180,"Distributed systems & AI.",23,MUTED)
-body += pill(30,209,115,"Python",MINT)+pill(154,209,111,"AI agents",VIOLET)+pill(274,209,175,"Data engineering",PINK)
+body += text(30,149,"Building tools for agents.",23,MUTED)
+body += text(30,180,"Desktop, graphics & video.",23,MUTED)
+body += pill(30,209,115,"Python",MINT)+pill(154,209,111,"AI agents",VIOLET)+pill(274,209,175,"MCP tools",PINK)
 body += systems_diagram(264,396,.85)
-body += text(260,568,"SOFTWARE ENGINEER · LONDON, UK",12,MUTED,500,'class="mono" text-anchor="middle" letter-spacing="1.1"')
-svg("hello-mobile.svg",520,600,body,"Artem Skulimovskiy — software engineer in London")
+body += text(260,568,"AGENTIC ENGINEER · LONDON, UK",12,MUTED,500,'class="mono" text-anchor="middle" letter-spacing="1.1"')
+svg("hello-mobile.svg",520,600,body,"Artem Skulimovskiy — agentic engineer in London")
 
 
 def card(name, label, title, lines, color, art, title_size=30):
@@ -125,7 +125,7 @@ book = f'''<g transform="translate(380 74)"><g class="float2">
 <path d="M-41 18 L-41 -22 Q-20 -30 0 -16 Q20 -30 41 -22 L41 18 Q20 10 0 27 Q-20 10 -41 18Z" fill="#342b48" stroke="{VIOLET}" stroke-width="2"/>
 <path d="M0 -15 V26 M-30 -10 Q-17 -14 -9 -5 M-30 0 Q-17 -4 -9 5 M10 -5 Q22 -13 32 -10 M10 5 Q22 -3 32 0" fill="none" stroke="{VIOLET}" stroke-width="2"/>
 </g></g>'''+star(326,50,GOLD,.7)+star(430,36,PINK,.75,-1)+star(392,30,MINT,.6,-2)
-card("litharness.svg","01 / AGENT ORCHESTRATION","LitHarness",["LLM agent orchestration for serial fiction.","Planning, persistent state, and revision."],VIOLET,book)
+card("litharness.svg","AGENT WORKFLOWS","LitHarness",["Write LitRPG serials with a coding agent.","Story state, checks, and resumable runs."],VIOLET,book)
 
 latent = '<g transform="translate(384 72)"><g class="orbit">'
 for i,c in enumerate([PINK,VIOLET,MINT]):
@@ -234,9 +234,9 @@ app_card("app-roman","Roman Emperors Quiz","Identify emperors, recognise portrai
 
 body = '<path d="M10 1 H990" stroke="#353047"/>'
 body += text(20,49,"ARTEM SKULIMOVSKIY",12,MUTED,500,'class="mono" letter-spacing="1.5"')
-body += text(20,77,"Backend engineering · Distributed systems · AI",18,INK,500)
+body += text(20,77,"Agent tools · Creative workflows · Systems",18,INK,500)
 body += '<path d="M637 54 Q727 14 800 54 T978 54" stroke="url(#rainbow)" stroke-width="2" fill="none" stroke-dasharray="5 8" class="dash"/>'
 body += star(780,47,PINK,1.3)+star(927,61,MINT,1,-1)+star(691,38,GOLD,.8,-2)
-svg("footer.svg",1000,100,body,"Artem Skulimovskiy — backend engineering, distributed systems, and AI")
+svg("footer.svg",1000,100,body,"Artem Skulimovskiy — agent tools, creative workflows, and systems")
 
 print(f"Generated {len(list(ASSETS.glob('*.svg')))} SVG assets in {ASSETS}")
