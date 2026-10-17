@@ -57,10 +57,7 @@ My background is in **backend infrastructure and distributed systems at SimCorp*
 | [Primordia](https://github.com/skulitom/primordia) | A GPU artificial-life laboratory with five worlds, 42 presets, saved discoveries, and headless exports. |
 | [Looking Glass](https://skulitom.github.io/LookingGlass/) | An experimental Rust re-remaster of *American McGee’s Alice*; requires compatible game data. |
 
-<details>
-<summary>Web apps & earlier experiments</summary>
-
-### Interactive web apps
+## Interactive web apps
 
 Explore maps, practise Chinese, and back up your song lists.
 
@@ -77,8 +74,6 @@ Explore maps, practise Chinese, and back up your song lists.
 <summary>Earlier experiments</summary>
 
 [Latent Space Explorer](https://github.com/skulitom/Latent-Space-Explorer) — an experiment in steering generative images through semantic directions.
-
-</details>
 
 </details>
 

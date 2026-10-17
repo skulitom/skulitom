@@ -34,3 +34,5 @@ Use the header’s dark violet/navy panels, rounded frames, and Segoe UI labels 
 LitHarness was rebuilt from 27 September: describe the current brief/bible/chapter workflow from its README, not the archived multi-agent implementation. The portfolio writing sample is explicitly historical. PixelForge, Looking Glass, and Cutbolt are linked as additional projects; preserve their prototype and game-data qualifications. Haltere’s displayed clip is the 29 September fast-brain-11 round-6 development flight, not a completed race; fast-brain-08 retains the published 5:17.805 race result. Verify both the latest release notes and the README, which can be updated at different times.
 
 Run `python scripts/generate_agent_assets.py` to regenerate the v3 header, footer, and agent-tool illustrations.
+
+Keep the six animated pixel-art live website links visible in the main README, outside collapsed details. Artem explicitly wants these retained as part of the profile aesthetic.
