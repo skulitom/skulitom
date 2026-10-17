@@ -1,7 +1,4 @@
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/v3/hello-mobile.svg">
-  <img src="assets/v3/hello.svg" width="100%" alt="Artem Skulimovskiy — agentic engineer in London. Building tools for AI agents.">
-</picture>
+<picture><source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/v4/hero-mobile-still.svg"><source media="(max-width: 600px)" srcset="assets/v4/hero-mobile.svg"><source media="(prefers-reduced-motion: reduce)" srcset="assets/v4/hero-still.svg"><img src="assets/v4/hero.svg" width="100%" alt="Artem Skulimovskiy — agentic engineer in London. Building tools for AI agents. Pixel art made with Pixelbolt: on a moonlit workbench a mint liquid boils in a glass flask and its steam rolls up in shaded billows."></picture>
 
 <p>
 <a href="https://skulitom.github.io/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/links/v3/static/portfolio.svg"><img src="assets/links/v3/portfolio.svg" width="280" alt="Explore my portfolio — projects, demos and writing samples"></picture></a>
@@ -18,12 +15,12 @@ My background is in **backend infrastructure and distributed systems at SimCorp*
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/Anode"><img src="assets/projects/anode.svg" width="100%" alt="Anode: separate input sessions for you and an AI agent on one Windows machine."></a>
+<a href="https://github.com/skulitom/Anode"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/v4/anode-still.svg"><img src="assets/v4/anode.svg" width="100%" alt="Anode, in pixel art made with Pixelbolt: your desk in front; through a doorway, an agent's desk in drifting mist, where its own cursor works and the mist curls in its wake."></picture></a>
 <h3><a href="https://github.com/skulitom/Anode">Anode</a></h3>
 <p>Give an agent its own background Windows desktop to use and test apps while you keep working. Screenshots, accessibility controls, and separate mouse and keyboard focus. Runs as your user with access to your files.</p>
 <p><strong>C# · Windows APIs · MCP</strong></p>
 </td><td width="50%" valign="top">
-<a href="https://github.com/skulitom/Inkbolt"><img src="assets/v3/inkbolt.svg" width="100%" alt="Inkbolt — graphics for agents."></a>
+<a href="https://github.com/skulitom/Inkbolt"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/v4/inkbolt-still.svg"><img src="assets/v4/inkbolt.svg" width="100%" alt="Inkbolt, in pixel art made with Pixelbolt: an ink drop falls into water, blooms into a vortex ring, and a vector curve traces it."></picture></a>
 <h3><a href="https://github.com/skulitom/Inkbolt">Inkbolt</a></h3>
 <p>Local vector and raster editing for diagrams, illustrations, and image assets. Agents preview and revise artwork, keep editable sources, and export the result.</p>
 <p><strong>Rust · MCP · JSON CLI</strong></p>
@@ -31,18 +28,20 @@ My background is in **backend infrastructure and distributed systems at SimCorp*
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/skulitom/Cutbolt"><img src="assets/v3/cutbolt.svg" width="100%" alt="Cutbolt — video for agents."></a>
+<a href="https://github.com/skulitom/Cutbolt"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/v4/cutbolt-still.svg"><img src="assets/v4/cutbolt.svg" width="100%" alt="Cutbolt, in pixel art made with Pixelbolt: a film strip rises out of a developing bath and plays like a flipbook past a playhead."></picture></a>
 <h3><a href="https://github.com/skulitom/Cutbolt">Cutbolt</a></h3>
 <p>A local video editing engine for agents. Arrange footage, add captions and graphics, mix sound, and export—with saved revisions and undo.</p>
 <p><strong>Rust · FFmpeg · MCP</strong></p>
 </td><td width="50%" valign="top">
-<a href="https://github.com/skulitom/Pixelbolt"><img src="assets/v3/pixelbolt.svg" width="100%" alt="Pixelbolt — pixel art for agents."></a>
+<a href="https://github.com/skulitom/Pixelbolt"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/v4/pixelbolt-still.svg"><img src="assets/v4/pixelbolt.svg" width="100%" alt="Pixelbolt, in pixel art made with Pixelbolt: molten metal pours into a star-shaped mould, cools along the palette and pops out as a finished sprite."></picture></a>
 <h3><a href="https://github.com/skulitom/Pixelbolt">Pixelbolt</a></h3>
 <p>Pixel art and animation from editable JSON recipes. Agents make, preview, and revise sprites and atlases; people can edit the same recipe in a local studio.</p>
 <p><strong>JavaScript · MCP · Local studio</strong></p>
 </td>
 </tr>
 </table>
+
+<sub>The header, tool cards and footer art were made with <a href="https://github.com/skulitom/Pixelbolt">Pixelbolt</a>: the liquids, mist and steam are real fluid simulations, shaded and animated as pixel art.</sub>
 
 **[Nestbolt](https://github.com/skulitom/Nestbolt)** — sheet nesting for laser, CNC, and fabric cutting, with browser, CLI, and MCP interfaces.
 
@@ -126,4 +125,4 @@ I use Codex and Claude Code throughout development: I set the architecture and c
 
 <br>
 
-<img src="assets/v3/footer.svg" width="100%" alt="Artem Skulimovskiy — agent tools, creative workflows, and systems.">
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/v4/footer-still.svg"><img src="assets/v4/footer.svg" width="100%" alt="Artem Skulimovskiy — agent tools, creative workflows, and systems. Pixel art made with Pixelbolt: the edge of a moonlit workbench."></picture>
