@@ -1,0 +1,21 @@
+{
+ "out": "keepsake.svg",
+ "kind": "tile",
+ "width": 68,
+ "height": 42,
+ "scale": 2,
+ "radius": 6,
+ "title": "Keepsake",
+ "desc": "Pixel art made with Pixelbolt: a cassette tape labelled KEEP standing on a ledge of the workbench; its reels spin as it saves, and a sparkle flashes at its corner.",
+ "layers": [
+  {
+   "sheet": "keepsake/keepsake.png",
+   "atlas": "keepsake/keepsake.atlas.json",
+   "animation": "keepsake",
+   "recipe": "recipes/keepsake.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}

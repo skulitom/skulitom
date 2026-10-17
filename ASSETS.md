@@ -38,7 +38,7 @@ The updated header and footer and the Inkbolt, Cutbolt, Pixelbolt, and Nestbolt 
 
 ## 17 October 2026 Pixelbolt pixel art (`assets/v4/`)
 
-The header (desktop and phone), the Anode, Inkbolt, Cutbolt and Pixelbolt cards, and the footer are original animated pixel art made with [Pixelbolt](https://github.com/skulitom/Pixelbolt) (commit `8c5f662`). Every pixel comes from a Pixelbolt render. The liquids, mist, ink and steam are Pixelbolt fluid simulations (FLIP liquids and stable-fluid gases), compiled into palette pixels and then shaded, lit and timed as pixel art. All pieces share one 70-colour palette (`art/palette.json`).
+The header (desktop and phone), the Anode, Inkbolt, Cutbolt and Pixelbolt cards, the portfolio button and the six web-app buttons (`assets/v4/links/`), and the footer are original animated pixel art made with [Pixelbolt](https://github.com/skulitom/Pixelbolt) (commit `8c5f662`). Every pixel comes from a Pixelbolt render. The liquids, mist, ink and steam are Pixelbolt fluid simulations (FLIP liquids and stable-fluid gases), compiled into palette pixels and then shaded, lit and timed as pixel art. All pieces share one 70-colour palette (`art/palette.json`).
 
 Each SVG holds its Pixelbolt sprite sheets as embedded lossless PNGs and steps through the frames with CSS. Nearest-neighbour scaling keeps the pixels crisp at any width. The `-still.svg` files hold one hand-picked frame, which the README serves through `<picture>` when reduced motion is preferred. The labels and chips in the header are vector text over the art. The sources and the one-command rebuild are in `art/`.
 

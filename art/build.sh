@@ -38,9 +38,9 @@ node -e 'process.exit(Number(process.versions.node.split(".")[0]) >= 20 ? 0 : 1)
   { echo "need Node 20+ (found $(node --version))" >&2; exit 1; }
 "$PYTHON" -c "import PIL" 2>/dev/null || { echo "need Pillow for $PYTHON (pip install Pillow)" >&2; exit 1; }
 
-# Pieces in build order. A new piece (the button set, say) is a folder with its own build.sh that sources
+# Pieces in build order. A new piece is a folder with its own build.sh that sources
 # tools/env.sh and writes only to its out/: add its name here and its wrap specs to tools/integrate.py.
-PIECES=(hero anode inkbolt cutbolt pixelbolt nestbolt)
+PIECES=(hero anode inkbolt cutbolt pixelbolt nestbolt buttons)
 for piece in "${PIECES[@]}"; do
   "$BASH" "$ART/$piece/build.sh"
 done

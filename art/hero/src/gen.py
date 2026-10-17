@@ -552,14 +552,14 @@ def motes(frame):
     return ops
 
 
-def steam_light(vent=fluids.VENT):
+def steam_light(vent=fluids.VENT, radii=(6.0, 9.5)):
     """Inside the steam layer: the flask's mint light from below. Rings of light centred on the neck recolour only the
     steam's pixels (solid near the neck, Bayer-feathered further out, dim tones furthest), so the undersides of the
     billows leaving the neck turn mint while their moonlit tops stay pale."""
     vx, vy = vent
     # Only the shadow's sharpest rim (marked t by the look) takes the light, solid: the steam leaving the neck gets a
     # 1-2 px mint rim on its lower right and keeps its own body; elsewhere the marker becomes the plain shadow u.
-    return (ring(vx, vy, 6.0, "l", 1.0, ["t"]) + ring(vx, vy, 9.5, "k", 1.0, ["t"])
+    return (ring(vx, vy, radii[0], "l", 1.0, ["t"]) + ring(vx, vy, radii[1], "k", 1.0, ["t"])
             + [{"op": "dither", "color": "u", "density": 1.0, "over": ["t"]}])
 
 

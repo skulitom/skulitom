@@ -1,0 +1,22 @@
+{
+ "out": "chinese-radicals-narrow-still.svg",
+ "kind": "tile-narrow",
+ "width": 56,
+ "height": 42,
+ "scale": 2,
+ "radius": 6,
+ "title": "Chinese Radicals",
+ "desc": "Pixel art made with Pixelbolt: a calligraphy practice sheet with the radical \u6728 printed in pink for tracing; a brush inks its first stroke in simulated wet ink, which glistens and dries matt.",
+ "static": true,
+ "layers": [
+  {
+   "sheet": "chinese-radicals-narrow/chinese-radicals-narrow.png",
+   "atlas": "chinese-radicals-narrow/chinese-radicals-narrow.atlas.json",
+   "animation": "chinese-radicals-narrow",
+   "recipe": "recipes/chinese-radicals-narrow.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}

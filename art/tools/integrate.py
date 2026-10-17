@@ -1,8 +1,10 @@
 """Build the README's v4 art from the pieces in art/: each piece's wrapper specs (art/<piece>/*.wrap.json, layer paths
-relative to art/<piece>/out/) plus the profile's vector text, chips and panel frame. Writes animated and still SVGs to
-../assets/v4/ (next to art/). Run art/build.sh first (it builds every piece's out/, then runs this).
+relative to art/<piece>/out/) plus the profile's vector text, chips, labels and panel frame. Writes animated and still
+SVGs to ../assets/v4/ (next to art/), the link buttons to ../assets/v4/links/. Run art/build.sh first (it builds every
+piece's out/, then runs this).
 
-Usage: python art/tools/integrate.py [name ...]     (names as in PIECES, e.g. hero anode; default: all)
+Usage: python art/tools/integrate.py [name ...]   (rows of PIECES, e.g. hero links/keepsake, or art/ folders such as
+                                                   buttons; default: all)
 
 Chip widths come from Pillow's text measurements of the Windows fonts below. Where those fonts are missing (Linux,
 macOS, CI) the widths recorded in MEASURED are used instead, so the SVGs come out the same, and the text-fit checks are
@@ -27,6 +29,7 @@ INK, MUTED, MINT, VIOLET, PINK, GOLD = "#f5f1ff", "#b6aecb", "#71efd2", "#b496ff
 FONTS = {
     ("sans", 400): "C:/Windows/Fonts/segoeui.ttf",
     ("sans", 500): "C:/Windows/Fonts/seguisb.ttf",
+    ("sans", 600): "C:/Windows/Fonts/seguisb.ttf",    # Segoe UI Semibold, as for 500: the buttons' labels
     ("sans", 700): "C:/Windows/Fonts/segoeuib.ttf",
     ("mono", 600): "C:/Windows/Fonts/consolab.ttf",
     ("mono", 500): "C:/Windows/Fonts/consola.ttf",
@@ -133,6 +136,74 @@ def eyebrow(label, colour):
     return text(8, 11.5, label, 4.8, colour, 600, mono=True, spacing=0.55)
 
 
+# ---------------------------------------------------------------- link buttons (assets/v4/links/)
+# Matched to the v3 buttons (assets/links/v3/*.svg). v3 is in CSS px and the art is 2 CSS px per art px, so every
+# coordinate and size below is v3's halved: tile labels Segoe UI 600 at 13 px (6.5), #f5f1ff, centred on the tile; one
+# line at y 64 (32), two lines at 56 and 71 (28 and 35.5); the portfolio's 16 px 600 title at (51, 28) and 11 px 400
+# subtitle at (51, 46) in #b6aecb, and its arrow; 24 s cycles with v3's --delay stagger (delay_ms); frame #353047
+# (the portfolio's mint at 50%), radius 6 (v3's rx 12) from the wrap specs.
+# Where v3's positions would put text on the new art, the text moves to the area the art keeps plain (set these to 0
+# and 25.5 for v3's positions exactly):
+TWO_LINE_DROP = 3   # v3's two-line labels reach up to row 23, over the ledges (rows 20-25); the tiles keep rows 26-41 plain
+PORTFOLIO_X = 33    # v3's x 51 (25.5) runs into the terminal (x 2-30); the portfolio art keeps x 33-139 plain
+LABEL_TOP = 26      # first plain row under the tiles' ledges
+PORTFOLIO_FRAME = "#71efd280"
+LINK_DELAYS = {"world-language-map": 0, "export-atlas": 4000, "london-in-minutes": 8000, "chinese-touch-typing": 12000,
+               "chinese-radicals": 16000, "keepsake": 20000, "portfolio": 0}
+LINK_LABELS = {"world-language-map": ["World Language", "Map"], "export-atlas": ["Export Atlas"],
+               "london-in-minutes": ["London", "in minutes"], "chinese-touch-typing": ["Chinese", "Touch Typing"],
+               "chinese-radicals": ["Chinese", "Radicals"], "keepsake": ["Keepsake"]}
+
+
+def check_text(value, size, weight, x, lo, hi, what, centred=False):
+    """Text-fit check for a label no geometry depends on (it is anchored, not measured into the layout): it must lie
+    within x lo..hi. Measured where the font exists, else skipped."""
+    path = FONTS[("sans", weight)]
+    if not Path(path).is_file():
+        _skipped.append(what)
+        return
+    if path not in _fonts:
+        _fonts[path] = ImageFont.truetype(path, 200)
+    w = _fonts[path].getlength(value) / 200 * size
+    left = x - w / 2 if centred else x
+    assert lo <= left and left + w <= hi, f"{what}: {value!r} spans x {left:.1f}-{left + w:.1f}, outside {lo}-{hi}"
+
+
+def tile_overlay(name, w):
+    lines = LINK_LABELS[name]
+    ys = [32] if len(lines) == 1 else [28 + TWO_LINE_DROP, 35.5 + TWO_LINE_DROP]
+    if ys[0] - 0.72 * 6.5 < LABEL_TOP:
+        print(f"note: {name}'s label starts above row {LABEL_TOP}, on the art")
+    parts = []
+    for line, y in zip(lines, ys):
+        check_text(line, 6.5, 600, w / 2, 2, w - 2, f"{name} label ({w} wide)", centred=True)
+        parts.append(text(w / 2, y, line, 6.5, INK, 600, anchor="middle"))
+    return "".join(parts)
+
+
+def portfolio_overlay():
+    x = PORTFOLIO_X
+    if x < 33:
+        print("note: the portfolio's text starts left of x 33, on the art")
+    check_text("Explore my portfolio", 8, 600, x, 0, 122, "portfolio title")          # clear of the arrow (124.5)
+    check_text("Projects, demos & writing samples", 5.5, 400, x, 0, 122, "portfolio subtitle")
+    return (text(x, 14, "Explore my portfolio", 8, INK, 600) +
+            text(x, 23, "Projects, demos & writing samples", 5.5, MUTED) +
+            '<path d="M124.5 15h7m-2.5-2.5 2.5 2.5-2.5 2.5" fill="none" stroke="#71efd2" stroke-width=".75" '
+            'stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def link_rows():
+    rows = [("links/portfolio", "buttons/portfolio", "portfolio.wrap.json", "portfolio-still.wrap.json",
+             portfolio_overlay, {"frame": PORTFOLIO_FRAME, "delay_ms": LINK_DELAYS["portfolio"]})]
+    for name in LINK_LABELS:
+        for variant, w in (("", 68), ("-narrow", 56)):
+            rows.append((f"links/{name}{variant}", f"buttons/{name}", f"{name}{variant}.wrap.json",
+                         f"{name}{variant}-still.wrap.json", lambda n=name, w=w: tile_overlay(n, w),
+                         {"delay_ms": LINK_DELAYS[name]}))
+    return rows
+
+
 PIECES = [
     # name (assets/v4/<name>.svg and <name>-still.svg), art/ folder, animated spec, still spec, overlay
     ("hero", "hero", "hero.wrap.json", "hero-still.wrap.json", hero_overlay),
@@ -144,27 +215,30 @@ PIECES = [
     ("pixelbolt", "pixelbolt", "pixelbolt-card.wrap.json", "pixelbolt-card-static.wrap.json",
      lambda: eyebrow("PIXEL ART FOR AGENTS", GOLD)),
     # art/nestbolt builds too (nestbolt.wrap.json, nestbolt-still.wrap.json) but isn't in the README yet: add a row
-    # here with its eyebrow when it is. New pieces (the button set) get their rows here the same way.
-]
+    # here with its eyebrow when it is.
+] + link_rows()   # links/<button>[-narrow][-still].svg; an optional 6th item overrides spec fields (frame, delay_ms)
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    only = set(sys.argv[1:])
-    unknown = only - {p[0] for p in PIECES}
+    only = set(sys.argv[1:])   # row names (hero, links/keepsake-narrow) or art/ folders (buttons, buttons/keepsake)
+    known = {key for p in PIECES for key in (p[0], p[1], p[1].split("/")[0])}
+    unknown = only - known
     if unknown:
         raise SystemExit(f"unknown piece(s): {', '.join(sorted(unknown))}")
-    for name, folder, anim, still, overlay in PIECES:
-        if only and name not in only:
+    for name, folder, anim, still, overlay, *extra in PIECES:
+        if only and not only & {name, folder, folder.split("/")[0]}:
             continue
         base = ART / folder / "out"
         if not base.is_dir():
-            raise SystemExit(f"{base} is missing: run art/build.sh (or art/{folder}/build.sh) first")
+            raise SystemExit(f"{base} is missing: run art/build.sh (or art/{folder.split('/')[0]}/build.sh) first")
         for spec_name, suffix in ((anim, ""), (still, "-still")):
             spec = json.loads((ART / folder / spec_name).read_text(encoding="utf-8"))
             spec["overlay"] = overlay()
             spec["frame"] = FRAME
+            spec.update(*extra)
             target = OUT / f"{name}{suffix}.svg"
+            target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(build(spec, base), encoding="utf-8", newline="\n")
             print(f"{target.relative_to(ART.parent).as_posix()} {target.stat().st_size:,} bytes")
     if _skipped:

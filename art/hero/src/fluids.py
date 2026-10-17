@@ -138,7 +138,7 @@ DRAFT = {"at": [50, 24], "area": [100, 20], "rate": 0.05, "velocity": [-0.8, -0.
 
 
 def steam_source(origin=STEAM_ORIGIN, size=(STEAM_W, STEAM_H), billows=BILLOWS, thin=THIN, draft=DRAFT,
-                 name="steam", wind=-0.035):
+                 name="steam", wind=-0.035, breath=0.6, dissipation=0.04, buoyancy=0.2):
     """The steam over the flask's neck. `origin` is the canvas's top-left in the apparatus's (right-half) coordinates,
     so the phone hero can reuse it with its own canvas, billows, draft and dissolve."""
     ox, oy = origin
@@ -147,7 +147,7 @@ def steam_source(origin=STEAM_ORIGIN, size=(STEAM_W, STEAM_H), billows=BILLOWS, 
     rows = ["".join("A" if (y >= 56 - oy and NECK_COLS[0] - ox <= x <= NECK_COLS[1] - ox) else "." for x in range(w))
             for y in range(h)]
     # A thin, steady breath keeps the plume attached to the neck between billows.
-    emitters = [{"name": "breath", "at": [vx, vy - 0.5], "radius": 2.0, "rate": 1, "density": 0.6, "temperature": 0.5,
+    emitters = [{"name": "breath", "at": [vx, vy - 0.5], "radius": 2.0, "rate": 1, "density": breath, "temperature": 0.5,
                  "velocity": [0, -1.1], "noise": 0.15, "flicker": 0.2}]
     for i, (start, spin, side, radius, dens, up) in enumerate(billows, 1):
         emitters.append({"name": f"billow-{i}", "at": [vx, vy - 1], "radius": radius, "rate": 1, "start": start,
@@ -158,7 +158,7 @@ def steam_source(origin=STEAM_ORIGIN, size=(STEAM_W, STEAM_H), billows=BILLOWS, 
         # billows dissolve before the top margin instead of being cut flat by a band.
         *[dict({"name": f"thin-{k}" if isinstance(thin, list) else "thin", "rate": 1, "falloff": 1}, **t)
           for k, t in enumerate(thin if isinstance(thin, list) else [thin], 1)],
-        dict({"name": "draft"}, **draft),
+        *([dict({"name": "draft"}, **draft)] if draft else []),
     ]
     return {
         "format": "pixelforge-fluid", "version": 1, "name": name, "width": w, "height": h,
@@ -168,7 +168,7 @@ def steam_source(origin=STEAM_ORIGIN, size=(STEAM_W, STEAM_H), billows=BILLOWS, 
             "frames": FRAMES, "duration": MS, "loop": True, "seed": 5, "warmup": 3,
             # Slow and heavy: modest lift, more drag, gentle swirl; no cooling, so the lift holds and billows roll into
             # each other in the draft rather than piling into one mass.
-            "buoyancy": 0.2, "vorticity": 0.35, "dissipation": 0.04, "cooling": 0, "drag": 0.09,
+            "buoyancy": buoyancy, "vorticity": 0.35, "dissipation": dissipation, "cooling": 0, "drag": 0.09,
             "wind": [wind, 0],
             "obstacles": [{"symbol": "neck", "x": 0, "y": 0, "draw": "none"}],
             "emitters": emitters,

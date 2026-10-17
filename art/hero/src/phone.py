@@ -1,11 +1,11 @@
 """The phone hero (156x180, below 600 px): its own composition of the same workbench, at the desktop's scale.
 
 The name block (eyebrow, name, two-line tagline, chips) is overlaid as vector text on the quiet wall at the top:
-text-safe box x 6-150, y 6-80, with nothing bright above y 80 and nothing at all above y 70. The bench sits low
+text-safe box x 6-150, y 6-80, with nothing at all above y 70. The bench sits low
 (y 170); the apparatus fills y 84-180: the flask right of centre is the hero, the coil drips into the beaker at the
 left, the ink bottle stands in the moonlight's patch at the left end of the bench, the crucible between beaker and
-tripod, the monitor at the right. The steam leaves the neck (y 96), rises to about y 72 and curls right toward
-x 120-150 as it dissolves.
+tripod, the monitor at the right. The steam leaves the neck (y 96) in round billows that rise, grow and lean right
+toward x 110-140, dissolving before y 72.
 
 Reuses the desktop hero's compiled flask and drip (same canvases, same 96- and 48-frame loops, same beat) and adds its
 own steam source. Writes recipes/hero-mobile-bg.json (one frame) and recipes/hero-mobile-fx.json (96 frames, 156x122
@@ -35,19 +35,23 @@ CRUCIBLE = (APP[0] + 2, APP[1])
 MONITOR = (APP[0] - 17, APP[1])             # pulled in: ends 7 px inside the right edge
 FX_Y = 58                                   # the effects layer covers rows 58-179
 
-# Phone steam: a 100x46 canvas at phone (56, 58) over the neck (vent at phone (100, 96)). Smaller billows rise about
-# 20 px, then a draft curls them right; soak discs above and to the right dissolve them by y 72 and before the edge.
+# Phone steam: a 100x46 canvas at phone (56, 58) over the neck (vent at phone (100, 96)). The desktop's billows at
+# about 2/3 size leave the neck, rise and grow, each with its lit top and shadowed underside; a gentle uniform wind
+# leans the plume right as it rises (a draft that curled it sheared the billows into a flat slab with hanging lobes);
+# faster dissipation and a soft soak shaped as an ellipse over the top dissolve them before y 72, so nothing is cut.
 STEAM_AT = (56, 58)
 STEAM_ORIGIN = (STEAM_AT[0] - APP[0], STEAM_AT[1] - APP[1])
 STEAM_SIZE = (100, 46)
-BILLOWS = tuple((s0, spin, side, round(r * 0.75, 2), d, up) for s0, spin, side, r, d, up in fluids.BILLOWS)
-THIN = [{"at": [46, 0], "radius": 18, "density": -0.45}, {"at": [76, 2], "radius": 18, "density": -0.45},
-        {"at": [100, 16], "radius": 14, "density": -0.35}, {"at": [50, 2], "area": [100, 22], "density": -0.6}]
-DRAFT = {"at": [64, 20], "radius": 18, "rate": 0.08, "velocity": [1.1, -0.35], "expand": 0.4}
+# On the phone the surge's ramp billow (45) is left out and the surge's own billow is capped at the others' size, so
+# in the short rise every billow stays separate instead of merging into one mass.
+BILLOWS = tuple((s0, spin, side + 0.15, round(min(r, 3.2) * 0.85, 2), min(d, 3.6), round(up * 0.7, 2))
+                for s0, spin, side, r, d, up in fluids.BILLOWS if s0 != 45)
+THIN = {"at": [56, -2], "area": [100, 40], "density": -0.7}
 
 
 def steam_source():
-    return fluids.steam_source(STEAM_ORIGIN, STEAM_SIZE, BILLOWS, THIN, DRAFT, name="phone-steam", wind=0.03)
+    return fluids.steam_source(STEAM_ORIGIN, STEAM_SIZE, BILLOWS, THIN, None, name="phone-steam", wind=0.03,
+                               breath=0.1, dissipation=0.09, buoyancy=0.15)
 
 
 def vent():
@@ -135,18 +139,6 @@ def front(i):
     return shift(ops, 0, -FX_Y)
 
 
-def quiet_band():
-    """Inside the steam layer: above y 80 (the name block) the steam keeps only its dim tones (everything brighter
-    becomes v), and its lights fade to w through value-noise clumps over the next six rows, so the curl's dissolving
-    head stays faint; above y 70 nothing is left."""
-    q = QUIET - STEAM_AT[1]
-    top = QUIET - 10 - STEAM_AT[1]          # y 70: the soaks leave only sparse dissolve pixels above it; clear them
-    return [{"op": "clear", "x": 0, "y": 0, "w": STEAM_SIZE[0], "h": top},
-            dither(0, 0, STEAM_SIZE[0], q, "v", 1.0, over=["x", "F", "G", "w"]),
-            dither(0, q, STEAM_SIZE[0], 6, "w", [1.0, 0.0], direction="down", over=["x", "F", "G"], seed=11,
-                   pattern="value", scale=3)]
-
-
 def effects():
     steam = gen.fluid_frames("phone-steam")
     flask, drip = gen.fluid_frames("flask"), gen.fluid_frames("drip")
@@ -157,7 +149,8 @@ def effects():
         d = (i + fluids.DRIP_SHIFT) % fluids.DRIP_FRAMES
         frames.append({"name": f"loop-{i}", "duration": MS, "layers": [
             {"name": "steam", "x": STEAM_AT[0], "y": STEAM_AT[1] - FX_Y,
-             "ops": steam[i] + quiet_band() + gen.steam_light(vent())},
+             "ops": steam[i] + gen.steam_fade(STEAM_SIZE[0], (QUIET - 6 - STEAM_AT[1], QUIET + 4 - STEAM_AT[1]))
+             + gen.steam_light(vent(), (4.0, 6.0))},
             {"name": "liquid", "x": fx + APP[0], "y": fy + APP[1] - FX_Y, "ops": flask[i]},
             {"name": "drip", "x": dx + COIL[0], "y": dy + COIL[1] - FX_Y, "ops": drip[d]},
             {"name": "front", "ops": front(i)},

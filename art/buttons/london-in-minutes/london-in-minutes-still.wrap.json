@@ -1,0 +1,22 @@
+{
+ "out": "london-in-minutes-still.svg",
+ "kind": "tile",
+ "width": 68,
+ "height": 42,
+ "scale": 2,
+ "radius": 6,
+ "title": "London in minutes",
+ "desc": "Pixel art made with Pixelbolt: a little violet steam train on a track along a ledge of the workbench, a faint London skyline behind; it runs, chuffing three puffs of simulated steam, and eases to a stop.",
+ "static": true,
+ "layers": [
+  {
+   "sheet": "london-in-minutes/london-in-minutes.png",
+   "atlas": "london-in-minutes/london-in-minutes.atlas.json",
+   "animation": "london-in-minutes",
+   "recipe": "recipes/london-in-minutes.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}

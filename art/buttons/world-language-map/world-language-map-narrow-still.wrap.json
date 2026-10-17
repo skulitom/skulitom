@@ -1,0 +1,22 @@
+{
+ "out": "world-language-map-narrow-still.svg",
+ "kind": "tile-narrow",
+ "width": 56,
+ "height": 42,
+ "scale": 2,
+ "radius": 6,
+ "title": "World Language Map",
+ "desc": "Pixel art made with Pixelbolt: a desk globe in a brass meridian ring on a ledge of the workbench, with a speech bubble beside it; the globe is flicked, spins one turn and stops, and the bubble pops up again.",
+ "static": true,
+ "layers": [
+  {
+   "sheet": "world-language-map-narrow/world-language-map-narrow.png",
+   "atlas": "world-language-map-narrow/world-language-map-narrow.atlas.json",
+   "animation": "world-language-map-narrow",
+   "recipe": "recipes/world-language-map-narrow.json",
+   "x": 0,
+   "y": 0,
+   "still": 21
+  }
+ ]
+}
